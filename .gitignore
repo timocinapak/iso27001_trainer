@@ -24,3 +24,11 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Coverage
+.coverage
+coverage/
+htmlcov/
+
+# Build artifacts
+*.tsbuildinfo
