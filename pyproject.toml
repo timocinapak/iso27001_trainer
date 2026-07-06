@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "compliance_ai_factory"
+version = "0.1.0"
+description = "Enterprise AI Dataset Engineering Platform for Compliance Auditing"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.0",
+    "rich>=13.0",
+    "click>=8.0",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "mypy>=1.0",
+    "ruff>=0.5",
+    "pre-commit>=3.0",
+]
+server = [
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.29.0",
+]
+pdf = [
+    "pypdf>=4.0",
+    "pdfplumber>=0.10",
+]
+docx = [
+    "python-docx>=1.0",
+]
+html = [
+    "beautifulsoup4>=4.12",
+    "lxml>=5.0",
+]
+excel = [
+    "openpyxl>=3.1",
+]
+parquet = [
+    "pyarrow>=15.0",
+]
+all = [
+    "compliance_ai_factory[dev,server,pdf,docx,html,excel,parquet]",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"compliance_ai_factory" = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=src/compliance_ai_factory --cov-report=term-missing"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP", "B", "SIM", "ARG"]
+
+[tool.mypy]
+strict = true
+python_version = "3.11"
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = ["tests.*"]
+strict = false

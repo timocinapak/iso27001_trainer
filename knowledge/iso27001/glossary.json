@@ -1,0 +1,77 @@
+[
+  {
+    "term": "ISMS",
+    "definition": "Information Security Management System",
+    "context": "The core framework defined by ISO 27001 for managing information security."
+  },
+  {
+    "term": "SoA",
+    "definition": "Statement of Applicability",
+    "context": "Document listing all controls from Annex A and justifying their inclusion or exclusion."
+  },
+  {
+    "term": "RTP",
+    "definition": "Risk Treatment Plan",
+    "context": "Plan describing how identified risks will be treated through controls and other measures."
+  },
+  {
+    "term": "BIA",
+    "definition": "Business Impact Analysis",
+    "context": "Process of identifying the criticality of business functions and the impact of their disruption."
+  },
+  {
+    "term": "BCP",
+    "definition": "Business Continuity Plan",
+    "context": "Documented procedures for maintaining or recovering business functions during a disruption."
+  },
+  {
+    "term": "DRP",
+    "definition": "Disaster Recovery Plan",
+    "context": "Plan for recovering IT infrastructure and systems after a disaster."
+  },
+  {
+    "term": "NDA",
+    "definition": "Non-Disclosure Agreement",
+    "context": "Legal contract ensuring confidentiality between parties."
+  },
+  {
+    "term": "AUP",
+    "definition": "Acceptable Use Policy",
+    "context": "Policy defining acceptable use of organizational assets and information systems."
+  },
+  {
+    "term": "MFA",
+    "definition": "Multi-Factor Authentication",
+    "context": "Authentication method requiring two or more verification factors."
+  },
+  {
+    "term": "IAM",
+    "definition": "Identity and Access Management",
+    "context": "Framework for managing digital identities and access privileges."
+  },
+  {
+    "term": "SIEM",
+    "definition": "Security Information and Event Management",
+    "context": "System for collecting, analyzing and correlating security events."
+  },
+  {
+    "term": "SOC",
+    "definition": "Security Operations Center",
+    "context": "Centralized team monitoring and responding to security incidents."
+  },
+  {
+    "term": "VAPT",
+    "definition": "Vulnerability Assessment and Penetration Testing",
+    "context": "Security testing methodology for identifying vulnerabilities."
+  },
+  {
+    "term": "PDCA",
+    "definition": "Plan-Do-Check-Act",
+    "context": "Iterative management method used for ISMS continual improvement."
+  },
+  {
+    "term": "RACI",
+    "definition": "Responsible, Accountable, Consulted, Informed",
+    "context": "Matrix defining roles and responsibilities for tasks and deliverables."
+  }
+]

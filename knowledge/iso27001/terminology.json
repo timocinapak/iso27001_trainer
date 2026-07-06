@@ -1,0 +1,98 @@
+[
+  {
+    "term": "Information Security",
+    "definition": "Preservation of confidentiality, integrity and availability of information.",
+    "synonyms": ["infosec", "data security"],
+    "abbreviations": []
+  },
+  {
+    "term": "Confidentiality",
+    "definition": "Property that information is not made available or disclosed to unauthorized individuals, entities, or processes.",
+    "synonyms": ["privacy", "secrecy"],
+    "abbreviations": []
+  },
+  {
+    "term": "Integrity",
+    "definition": "Property of accuracy and completeness of information and processing methods.",
+    "synonyms": ["accuracy", "completeness"],
+    "abbreviations": []
+  },
+  {
+    "term": "Availability",
+    "definition": "Property of being accessible and usable upon demand by an authorized entity.",
+    "synonyms": ["accessibility", "uptime"],
+    "abbreviations": []
+  },
+  {
+    "term": "Information Security Management System",
+    "definition": "Systematic approach for establishing, implementing, operating, monitoring, reviewing, maintaining and improving an organization's information security.",
+    "synonyms": ["ISMS"],
+    "abbreviations": ["ISMS"]
+  },
+  {
+    "term": "Risk Assessment",
+    "definition": "Process of risk identification, risk analysis and risk evaluation.",
+    "synonyms": ["risk analysis", "risk evaluation"],
+    "abbreviations": []
+  },
+  {
+    "term": "Risk Treatment",
+    "definition": "Process of selecting and implementing measures to modify risk.",
+    "synonyms": ["risk mitigation", "risk remediation"],
+    "abbreviations": []
+  },
+  {
+    "term": "Statement of Applicability",
+    "definition": "Documented statement describing the controls that are relevant and applicable to the ISMS.",
+    "synonyms": ["SoA"],
+    "abbreviations": ["SoA"]
+  },
+  {
+    "term": "Control",
+    "definition": "Measure that maintains and/or modifies risk.",
+    "synonyms": ["safeguard", "countermeasure", "security control"],
+    "abbreviations": []
+  },
+  {
+    "term": "Nonconformity",
+    "definition": "Non-fulfillment of a requirement.",
+    "synonyms": ["finding", "non-compliance", "gap"],
+    "abbreviations": []
+  },
+  {
+    "term": "Corrective Action",
+    "definition": "Action to eliminate the cause of a nonconformity and to prevent recurrence.",
+    "synonyms": ["remediation", "fix"],
+    "abbreviations": []
+  },
+  {
+    "term": "Continual Improvement",
+    "definition": "Recurring activity to enhance performance.",
+    "synonyms": ["continuous improvement"],
+    "abbreviations": []
+  },
+  {
+    "term": "Asset",
+    "definition": "Anything that has value to the organization.",
+    "synonyms": ["resource", "information asset"],
+    "abbreviations": []
+  },
+  {
+    "term": "Threat",
+    "definition": "Potential cause of an unwanted incident, which can result in harm to a system or organization.",
+    "synonyms": ["danger", "risk source"],
+    "abbreviations": []
+  },
+  {
+    "term": "Vulnerability",
+    "definition": "Weakness of an asset or control that can be exploited by one or more threats.",
+    "synonyms": ["weakness", "flaw", "gap"],
+    "abbreviations": []
+  },
+  {
+    "term": "Incident",
+    "definition": "Single occurrence or series of unwanted or unexpected information security events that have a significant probability of compromising business operations and threatening information security.",
+    "synonyms": ["security event", "breach", "compromise"],
+    "abbreviations": []
+  }
+]

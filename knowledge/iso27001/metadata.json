@@ -1,0 +1,9 @@
+{
+  "standard_name": "ISO/IEC 27001",
+  "version": "2022",
+  "release_date": "2022-10-25",
+  "publisher": "International Organization for Standardization (ISO)",
+  "supported_languages": ["en"],
+  "description": "Information security, cybersecurity and privacy protection — Information security management systems — Requirements",
+  "category": "information_security"
+}

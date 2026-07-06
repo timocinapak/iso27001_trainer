@@ -1,0 +1,98 @@
+[
+  {
+    "rule_id": "RR-001",
+    "rule_type": "compliance",
+    "description": "A control is fully compliant when all expected outcomes are demonstrated through evidence.",
+    "logic": "IF evidence exists for all expected outcomes AND evidence is current AND evidence covers scope THEN control_status = 'compliant'",
+    "control_ids": [],
+    "severity": "medium"
+  },
+  {
+    "rule_id": "RR-002",
+    "rule_type": "non_compliance",
+    "description": "A control is non-compliant when critical evidence is missing or controls are not implemented.",
+    "logic": "IF (mandatory evidence missing OR control not implemented) THEN control_status = 'non_compliant' AND finding_severity = 'high'",
+    "control_ids": [],
+    "severity": "high"
+  },
+  {
+    "rule_id": "RR-003",
+    "rule_type": "partial_compliance",
+    "description": "A control is partially compliant when some evidence exists but gaps remain.",
+    "logic": "IF (evidence exists for some expected outcomes OR controls partially implemented) AND (gaps in coverage or evidence quality) THEN control_status = 'partially_compliant'",
+    "control_ids": [],
+    "severity": "medium"
+  },
+  {
+    "rule_id": "RR-004",
+    "rule_type": "evidence_quality",
+    "description": "Evidence must be current, complete, and cover the full scope of the organization.",
+    "logic": "IF (evidence_date > 12 months OR evidence scope < organization scope) THEN evidence_quality = 'insufficient' AND finding_priority = 'high'",
+    "control_ids": [],
+    "severity": "medium"
+  },
+  {
+    "rule_id": "RR-005",
+    "rule_type": "consistency",
+    "description": "Evidence and control implementation must be consistent across all departments.",
+    "logic": "IF (control implementation varies by department AND no compensating controls exist) THEN inconsistency_finding = True",
+    "control_ids": [],
+    "severity": "low"
+  },
+  {
+    "rule_id": "RR-006",
+    "rule_type": "policy_effectiveness",
+    "description": "Policies must be communicated, understood, and enforced, not merely documented.",
+    "logic": "IF (policy exists AND no evidence of communication OR no evidence of enforcement) THEN policy_effective = False AND finding_type = 'operational_effectiveness'",
+    "control_ids": ["A.5.1"],
+    "severity": "high"
+  },
+  {
+    "rule_id": "RR-007",
+    "rule_type": "access_control",
+    "description": "Access rights must follow least privilege and be reviewed regularly.",
+    "logic": "IF (access reviews not conducted within 6 months OR users have excessive privileges) THEN access_control_risk = 'high'",
+    "control_ids": ["A.5.15", "A.5.18", "A.8.3"],
+    "severity": "high"
+  },
+  {
+    "rule_id": "RR-008",
+    "rule_type": "incident_response",
+    "description": "Incident response capabilities must be tested and updated based on lessons learned.",
+    "logic": "IF (no incident response exercise in 12 months OR playbooks not updated after changes) THEN incident_readiness = 'uncertain' AND testing_gap = True",
+    "control_ids": ["A.5.24", "A.5.27"],
+    "severity": "medium"
+  },
+  {
+    "rule_id": "RR-009",
+    "rule_type": "supplier_risk",
+    "description": "Supplier risk must be assessed before engagement and monitored throughout the relationship.",
+    "logic": "IF (supplier without security assessment OR no security clauses in agreement) THEN supplier_risk = 'unmanaged' AND finding_severity = 'high'",
+    "control_ids": ["A.5.19", "A.5.20"],
+    "severity": "high"
+  },
+  {
+    "rule_id": "RR-010",
+    "rule_type": "vulnerability_management",
+    "description": "Vulnerabilities must be remediated within defined SLAs based on severity.",
+    "logic": "IF (critical_vulnerability_age > 30 days OR high_vulnerability_age > 90 days) THEN vulnerability_management_risk = 'high' AND remediation_gap = True",
+    "control_ids": ["A.8.8"],
+    "severity": "high"
+  },
+  {
+    "rule_id": "RR-011",
+    "rule_type": "business_continuity",
+    "description": "Business continuity plans must include information security requirements and be tested.",
+    "logic": "IF (BCP does not address information security OR BCP not tested in 12 months) THEN continuity_readiness = 'insufficient'",
+    "control_ids": ["A.5.29", "A.5.30"],
+    "severity": "high"
+  },
+  {
+    "rule_id": "RR-012",
+    "rule_type": "audit_scope",
+    "description": "Audit scope must cover all controls in the Statement of Applicability.",
+    "logic": "IF (control in SoA not audited OR audit scope excludes significant sites/systems) THEN audit_coverage_gap = True AND finding_severity = 'medium'",
+    "control_ids": ["A.5.35"],
+    "severity": "medium"
+  }
+]

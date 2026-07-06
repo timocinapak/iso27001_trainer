@@ -1,0 +1,62 @@
+[
+  {
+    "industry": "technology",
+    "description": "Software, IT services, and technology companies with digital products and services.",
+    "focus_controls": ["A.8.25", "A.8.26", "A.8.27", "A.8.28", "A.8.29", "A.5.23", "A.8.4", "A.8.20", "A.8.24", "A.8.2"],
+    "typical_risks": ["Software vulnerabilities", "Cloud misconfiguration", "Insider threat", "Intellectual property theft", "Supply chain attacks"]
+  },
+  {
+    "industry": "finance",
+    "description": "Banking, insurance, and financial services organizations managing sensitive financial data.",
+    "focus_controls": ["A.5.34", "A.5.31", "A.5.33", "A.8.24", "A.8.12", "A.8.2", "A.8.5", "A.8.15", "A.8.16", "A.5.23"],
+    "typical_risks": ["Financial fraud", "Data breach of PII/financial data", "Regulatory non-compliance", "Money laundering through systems"]
+  },
+  {
+    "industry": "healthcare",
+    "description": "Hospitals, clinics, pharmaceutical companies, and healthcare providers.",
+    "focus_controls": ["A.5.34", "A.5.33", "A.8.24", "A.8.13", "A.8.11", "A.8.12", "A.8.15", "A.7.1", "A.7.2", "A.7.3"],
+    "typical_risks": ["Patient data breach", "Medical device vulnerabilities", "Ransomware", "Regulatory non-compliance (HIPAA/GDPR)"]
+  },
+  {
+    "industry": "manufacturing",
+    "description": "Industrial manufacturing, automotive, and production organizations with OT/ICS environments.",
+    "focus_controls": ["A.8.20", "A.8.21", "A.8.22", "A.7.1", "A.7.2", "A.7.5", "A.7.8", "A.7.11", "A.5.19", "A.5.21"],
+    "typical_risks": ["OT/ICS compromise", "Supply chain disruption", "Intellectual property theft", "Physical security breaches"]
+  },
+  {
+    "industry": "retail",
+    "description": "E-commerce, brick-and-mortar retail, and omnichannel commerce organizations.",
+    "focus_controls": ["A.5.34", "A.5.14", "A.8.24", "A.8.5", "A.8.7", "A.8.12", "A.8.23", "A.8.20", "A.5.23", "A.6.7"],
+    "typical_risks": ["Payment card data theft", "E-commerce fraud", "Customer PII breach", "Supply chain compromise"]
+  },
+  {
+    "industry": "energy",
+    "description": "Oil, gas, electricity, and renewable energy organizations with critical infrastructure.",
+    "focus_controls": ["A.7.1", "A.7.2", "A.7.5", "A.7.8", "A.7.11", "A.8.20", "A.8.21", "A.5.30", "A.5.29", "A.8.14"],
+    "typical_risks": ["Critical infrastructure attack", "OT/ICS compromise", "Supply chain disruption", "Environmental disaster"]
+  },
+  {
+    "industry": "government",
+    "description": "Public sector organizations, agencies, and government departments.",
+    "focus_controls": ["A.5.31", "A.5.33", "A.5.34", "A.5.35", "A.8.24", "A.8.2", "A.8.5", "A.8.15", "A.8.16", "A.8.20"],
+    "typical_risks": ["Nation-state threat actors", "Data breach of citizen data", "Service disruption", "Insider threat"]
+  },
+  {
+    "industry": "education",
+    "description": "Universities, schools, and educational institutions.",
+    "focus_controls": ["A.5.34", "A.5.33", "A.8.1", "A.8.5", "A.8.7", "A.8.15", "A.8.23", "A.6.3", "A.6.7", "A.8.13"],
+    "typical_risks": ["Student data breach", "Ransomware", "Unsecured personal devices", "Limited security budget"]
+  },
+  {
+    "industry": "telecommunications",
+    "description": "Telecom operators, ISPs, and communication service providers.",
+    "focus_controls": ["A.8.20", "A.8.21", "A.8.22", "A.8.16", "A.8.15", "A.8.24", "A.5.7", "A.5.30", "A.8.14", "A.5.23"],
+    "typical_risks": ["Network infrastructure attack", "Customer data breach", "Service disruption", "Communications interception"]
+  },
+  {
+    "industry": "transportation",
+    "description": "Airlines, logistics, rail, maritime, and ground transportation organizations.",
+    "focus_controls": ["A.7.1", "A.7.2", "A.7.5", "A.8.20", "A.8.21", "A.5.30", "A.5.29", "A.8.14", "A.5.19", "A.5.21"],
+    "typical_risks": ["Operational technology compromise", "Supply chain disruption", "Physical security breach", "Service availability"]
+  }
+]

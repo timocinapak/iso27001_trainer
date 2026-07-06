@@ -1,0 +1,152 @@
+[
+  {
+    "source_control_id": "A.5.1",
+    "target_control_id": "A.5.2",
+    "relationship_type": "depends_on",
+    "description": "Policies require assigned roles to be enforced."
+  },
+  {
+    "source_control_id": "A.5.1",
+    "target_control_id": "A.5.36",
+    "relationship_type": "depends_on",
+    "description": "Policies require compliance monitoring to be effective."
+  },
+  {
+    "source_control_id": "A.5.2",
+    "target_control_id": "A.5.4",
+    "relationship_type": "supports",
+    "description": "Management responsibilities include assigning security roles."
+  },
+  {
+    "source_control_id": "A.5.9",
+    "target_control_id": "A.5.10",
+    "relationship_type": "depends_on",
+    "description": "Asset inventory is required to define acceptable use."
+  },
+  {
+    "source_control_id": "A.5.9",
+    "target_control_id": "A.5.12",
+    "relationship_type": "depends_on",
+    "description": "Assets must be inventoried before they can be classified."
+  },
+  {
+    "source_control_id": "A.5.12",
+    "target_control_id": "A.5.13",
+    "relationship_type": "depends_on",
+    "description": "Classification scheme defines labelling requirements."
+  },
+  {
+    "source_control_id": "A.5.15",
+    "target_control_id": "A.5.16",
+    "relationship_type": "depends_on",
+    "description": "Access control requires identity management."
+  },
+  {
+    "source_control_id": "A.5.15",
+    "target_control_id": "A.5.18",
+    "relationship_type": "depends_on",
+    "description": "Access control requires management of access rights."
+  },
+  {
+    "source_control_id": "A.5.16",
+    "target_control_id": "A.8.2",
+    "relationship_type": "depends_on",
+    "description": "Identity management underpins privileged access control."
+  },
+  {
+    "source_control_id": "A.5.19",
+    "target_control_id": "A.5.20",
+    "relationship_type": "depends_on",
+    "description": "Supplier risk management requires security agreements."
+  },
+  {
+    "source_control_id": "A.5.19",
+    "target_control_id": "A.5.22",
+    "relationship_type": "depends_on",
+    "description": "Supplier risk requires ongoing monitoring."
+  },
+  {
+    "source_control_id": "A.5.24",
+    "target_control_id": "A.5.25",
+    "relationship_type": "precedes",
+    "description": "Incident planning precedes event assessment."
+  },
+  {
+    "source_control_id": "A.5.25",
+    "target_control_id": "A.5.26",
+    "relationship_type": "precedes",
+    "description": "Event assessment precedes incident response."
+  },
+  {
+    "source_control_id": "A.5.26",
+    "target_control_id": "A.5.27",
+    "relationship_type": "precedes",
+    "description": "Incident response precedes learning."
+  },
+  {
+    "source_control_id": "A.5.29",
+    "target_control_id": "A.5.30",
+    "relationship_type": "depends_on",
+    "description": "Business continuity requires ICT readiness."
+  },
+  {
+    "source_control_id": "A.5.31",
+    "target_control_id": "A.5.34",
+    "relationship_type": "supports",
+    "description": "Legal requirements include PII protection obligations."
+  },
+  {
+    "source_control_id": "A.6.1",
+    "target_control_id": "A.6.2",
+    "relationship_type": "precedes",
+    "description": "Screening precedes employment terms and conditions."
+  },
+  {
+    "source_control_id": "A.6.3",
+    "target_control_id": "A.6.4",
+    "relationship_type": "supports",
+    "description": "Training supports the disciplinary process."
+  },
+  {
+    "source_control_id": "A.7.1",
+    "target_control_id": "A.7.2",
+    "relationship_type": "depends_on",
+    "description": "Perimeter definition enables entry controls."
+  },
+  {
+    "source_control_id": "A.7.1",
+    "target_control_id": "A.7.4",
+    "relationship_type": "supports",
+    "description": "Perimeters are reinforced by monitoring."
+  },
+  {
+    "source_control_id": "A.8.24",
+    "target_control_id": "A.8.13",
+    "relationship_type": "supports",
+    "description": "Cryptography supports backup protection."
+  },
+  {
+    "source_control_id": "A.8.25",
+    "target_control_id": "A.8.26",
+    "relationship_type": "precedes",
+    "description": "SDLC defines application security requirements."
+  },
+  {
+    "source_control_id": "A.8.25",
+    "target_control_id": "A.8.28",
+    "relationship_type": "depends_on",
+    "description": "SDLC requires secure coding practices."
+  },
+  {
+    "source_control_id": "A.8.25",
+    "target_control_id": "A.8.29",
+    "relationship_type": "depends_on",
+    "description": "SDLC requires security testing."
+  },
+  {
+    "source_control_id": "A.8.31",
+    "target_control_id": "A.8.32",
+    "relationship_type": "supports",
+    "description": "Environment separation supports change management."
+  }
+]

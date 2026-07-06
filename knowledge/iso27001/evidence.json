@@ -1,0 +1,188 @@
+[
+  {
+    "evidence_id": "EVID-POL-001",
+    "title": "Information Security Policy Document",
+    "description": "The approved and signed information security policy document.",
+    "category": "management",
+    "control_ids": ["A.5.1"],
+    "typical_documents": ["Information Security Policy", "Policy Approval Record"],
+    "system_evidence": ["Policy repository with version control"],
+    "management_evidence": ["Board minutes approving policy", "Policy distribution records"]
+  },
+  {
+    "evidence_id": "EVID-POL-002",
+    "title": "Topic-Specific Policies",
+    "description": "Supporting policies for specific security domains (access control, cryptography, etc.).",
+    "category": "management",
+    "control_ids": ["A.5.1", "A.5.15", "A.8.24"],
+    "typical_documents": ["Access Control Policy", "Cryptography Policy", "Acceptable Use Policy"],
+    "management_evidence": ["Policy review records", "Policy communication evidence"]
+  },
+  {
+    "evidence_id": "EVID-R&R-001",
+    "title": "Information Security Roles and Responsibilities Matrix",
+    "description": "Documented assignment of information security roles and responsibilities.",
+    "category": "management",
+    "control_ids": ["A.5.2"],
+    "typical_documents": ["RACI Matrix", "Role Descriptions", "Organization Chart"],
+    "management_evidence": ["Job descriptions with security responsibilities", "Appointment letters for security roles"]
+  },
+  {
+    "evidence_id": "EVID-SoD-001",
+    "title": "Segregation of Duties Matrix",
+    "description": "Matrix identifying conflicting duties and how they are segregated.",
+    "category": "management",
+    "control_ids": ["A.5.3"],
+    "typical_documents": ["Segregation of Duties Matrix", "Conflict Identification Report"],
+    "system_evidence": ["System access reviews showing segregation enforcement"]
+  },
+  {
+    "evidence_id": "EVID-INV-001",
+    "title": "Asset Inventory",
+    "description": "Complete inventory of information assets with classification and ownership.",
+    "category": "technical",
+    "control_ids": ["A.5.9"],
+    "typical_documents": ["Asset Inventory Register", "Asset Classification List"],
+    "system_evidence": ["CMDB output", "Asset management system records"],
+    "mandatory": true
+  },
+  {
+    "evidence_id": "EVID-AUP-001",
+    "title": "Acceptable Use Policy",
+    "description": "Policy defining acceptable use of information assets.",
+    "category": "management",
+    "control_ids": ["A.5.10"],
+    "typical_documents": ["Acceptable Use Policy", "Employee AUP Acknowledgment"],
+    "management_evidence": ["Signed acknowledgment records"]
+  },
+  {
+    "evidence_id": "EVID-IRP-001",
+    "title": "Incident Response Plan",
+    "description": "Documented incident response plan with roles, responsibilities, and procedures.",
+    "category": "management",
+    "control_ids": ["A.5.24"],
+    "typical_documents": ["Incident Response Plan", "Incident Response Playbooks"],
+    "management_evidence": ["Tabletop exercise records", "Incident response training records"]
+  },
+  {
+    "evidence_id": "EVID-BCP-001",
+    "title": "Business Continuity Plan",
+    "description": "Plan for maintaining information security during disruptions.",
+    "category": "management",
+    "control_ids": ["A.5.29", "A.5.30"],
+    "typical_documents": ["Business Continuity Plan", "Disaster Recovery Plan"],
+    "system_evidence": ["BCP/DR test results"],
+    "management_evidence": ["Exercise after-action reports"]
+  },
+  {
+    "evidence_id": "EVID-LGL-001",
+    "title": "Legal and Regulatory Register",
+    "description": "Register of applicable legal, regulatory, and contractual requirements.",
+    "category": "management",
+    "control_ids": ["A.5.31"],
+    "typical_documents": ["Legal Requirements Register", "Compliance Obligations Matrix"],
+    "management_evidence": ["Compliance assessment reports"]
+  },
+  {
+    "evidence_id": "EVID-TRN-001",
+    "title": "Security Awareness Training Records",
+    "description": "Records of information security awareness training completion.",
+    "category": "management",
+    "control_ids": ["A.6.3"],
+    "typical_documents": ["Training Completion Reports", "Awareness Program Schedule"],
+    "system_evidence": ["LMS training records"],
+    "management_evidence": ["Training effectiveness survey results"]
+  },
+  {
+    "evidence_id": "EVID-PHY-001",
+    "title": "Physical Security Perimeter Documentation",
+    "description": "Documentation of physical security perimeters and controls.",
+    "category": "physical",
+    "control_ids": ["A.7.1", "A.7.2"],
+    "typical_documents": ["Physical Security Policy", "Site Security Plans", "Access Control Lists"],
+    "system_evidence": ["Access control system logs", "CCTV footage archives"]
+  },
+  {
+    "evidence_id": "EVID-END-001",
+    "title": "Endpoint Protection Records",
+    "description": "Evidence of endpoint protection measures and status.",
+    "category": "technical",
+    "control_ids": ["A.8.1"],
+    "typical_documents": ["Endpoint Protection Policy", "Device Compliance Reports"],
+    "system_evidence": ["MDM compliance reports", "Antivirus console reports", "Encryption status reports"]
+  },
+  {
+    "evidence_id": "EVID-PRV-001",
+    "title": "Privileged Access Management Records",
+    "description": "Evidence of privileged access controls and monitoring.",
+    "category": "technical",
+    "control_ids": ["A.8.2"],
+    "typical_documents": ["Privileged Access Policy", "PAM Solution Configuration"],
+    "system_evidence": ["PAM audit logs", "Privileged session recordings", "Access review reports"]
+  },
+  {
+    "evidence_id": "EVID-VULN-001",
+    "title": "Vulnerability Management Records",
+    "description": "Evidence of regular vulnerability scanning and remediation.",
+    "category": "technical",
+    "control_ids": ["A.8.8"],
+    "typical_documents": ["Vulnerability Management Policy", "Scan Schedule"],
+    "system_evidence": ["Vulnerability scan reports", "Patch deployment reports", "Remediation tracking"],
+    "mandatory": true
+  },
+  {
+    "evidence_id": "EVID-BAK-001",
+    "title": "Backup and Restoration Records",
+    "description": "Evidence of regular backups and successful restoration testing.",
+    "category": "technical",
+    "control_ids": ["A.8.13"],
+    "typical_documents": ["Backup Policy", "Backup Schedule"],
+    "system_evidence": ["Backup completion logs", "Restoration test reports"]
+  },
+  {
+    "evidence_id": "EVID-LOG-001",
+    "title": "System Logging Configuration and Records",
+    "description": "Evidence of system logging, log protection, and log review.",
+    "category": "technical",
+    "control_ids": ["A.8.15"],
+    "typical_documents": ["Logging Policy", "Log Retention Schedule"],
+    "system_evidence": ["SIEM console screenshots", "Log review records", "Audit log exports"]
+  },
+  {
+    "evidence_id": "EVID-CRY-001",
+    "title": "Cryptography Policy and Key Management Records",
+    "description": "Evidence of cryptographic controls and key management practices.",
+    "category": "technical",
+    "control_ids": ["A.8.24"],
+    "typical_documents": ["Cryptography Policy", "Key Management Procedure"],
+    "system_evidence": ["Certificate inventory", "Key rotation logs", "TLS configuration evidence"]
+  },
+  {
+    "evidence_id": "EVID-SDL-001",
+    "title": "Secure SDLC Documentation",
+    "description": "Evidence that security is integrated into the software development lifecycle.",
+    "category": "technical",
+    "control_ids": ["A.8.25"],
+    "typical_documents": ["Secure SDLC Policy", "SSDLC Process Flow"],
+    "system_evidence": ["SAST/DAST tool reports", "Threat modeling records", "Security review sign-offs"]
+  },
+  {
+    "evidence_id": "EVID-NET-001",
+    "title": "Network Security Architecture Documentation",
+    "description": "Documentation of network security controls and architecture.",
+    "category": "technical",
+    "control_ids": ["A.8.20"],
+    "typical_documents": ["Network Architecture Diagram", "Firewall Rule Set", "Network Security Policy"],
+    "system_evidence": ["Firewall configuration backups", "NAC system logs"]
+  },
+  {
+    "evidence_id": "EVID-CHG-001",
+    "title": "Change Management Records",
+    "description": "Evidence of formal change management processes.",
+    "category": "management",
+    "control_ids": ["A.8.32"],
+    "typical_documents": ["Change Management Policy", "Change Request Forms"],
+    "system_evidence": ["Change management system records"],
+    "management_evidence": ["Change Advisory Board meeting minutes"]
+  }
+]

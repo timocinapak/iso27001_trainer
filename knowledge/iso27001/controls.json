@@ -1,0 +1,2450 @@
+[
+  {
+    "control_id": "A.5.1",
+    "clause": "5",
+    "title": "Policies for Information Security",
+    "objective": "Define and manage information security policies aligned with business requirements.",
+    "description": "A set of policies for information security shall be defined, approved by management, published and communicated to employees and relevant external parties.",
+    "implementation_guidance": [
+      "Develop an information security policy document approved by top management",
+      "Review the policy at planned intervals or when significant changes occur",
+      "Ensure the policy is communicated to all employees and relevant external parties",
+      "Define specific topic-specific policies (e.g., access control, cryptography)"
+    ],
+    "expected_outcomes": [
+      "Information security policy is documented and approved by management",
+      "Policy is communicated and understood across the organization",
+      "Policy is reviewed regularly and updated as needed",
+      "Topic-specific policies support the overarching information security policy"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.2", "A.5.36", "A.6.1"],
+    "required_evidence": ["EVID-POL-001", "EVID-POL-002"],
+    "audit_intent": "Verify the organization has established, approved, communicated, and maintained information security policies."
+  },
+  {
+    "control_id": "A.5.2",
+    "clause": "5",
+    "title": "Information Security Roles and Responsibilities",
+    "objective": "Assign information security responsibilities clearly.",
+    "description": "Information security responsibilities shall be assigned and communicated.",
+    "implementation_guidance": [
+      "Define information security roles and responsibilities for all employees",
+      "Assign a person or team with overall responsibility for information security",
+      "Document and communicate role definitions",
+      "Include security responsibilities in job descriptions"
+    ],
+    "expected_outcomes": [
+      "Clear assignment of information security responsibilities",
+      "Accountability for security decisions is established",
+      "Employees understand their security obligations"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.1", "A.5.4", "A.6.1"],
+    "required_evidence": ["EVID-R&R-001", "EVID-R&R-002"],
+    "audit_intent": "Verify that information security roles, responsibilities, and accountabilities are defined and allocated."
+  },
+  {
+    "control_id": "A.5.3",
+    "clause": "5",
+    "title": "Segregation of Duties",
+    "objective": "Reduce risk of fraud, error, and circumvention of controls.",
+    "description": "Conflicting duties and areas of responsibility shall be segregated to reduce opportunities for unauthorized or unintentional modification or misuse of the organization's assets.",
+    "implementation_guidance": [
+      "Identify conflicting duties that could enable fraud or error",
+      "Implement separation of incompatible duties across systems and processes",
+      "Establish oversight mechanisms to detect circumvention",
+      "Document segregation of duties matrix for critical functions"
+    ],
+    "expected_outcomes": [
+      "No single person can compromise critical processes alone",
+      "Conflicting duties are separated across different individuals or teams",
+      "Monitoring detects attempts to bypass segregation"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.2", "A.5.4", "A.8.2", "A.8.3"],
+    "required_evidence": ["EVID-SoD-001", "EVID-SoD-002"],
+    "audit_intent": "Verify that conflicting duties are segregated to reduce risk of unauthorized activity."
+  },
+  {
+    "control_id": "A.5.4",
+    "clause": "5",
+    "title": "Management Responsibilities",
+    "objective": "Ensure management demonstrates leadership and commitment to information security.",
+    "description": "Management shall require all employees and contractors to apply information security in accordance with the established policies and procedures.",
+    "implementation_guidance": [
+      "Management to actively demonstrate commitment to information security",
+      "Communicate the importance of effective information security management",
+      "Ensure adequate resources for information security",
+      "Conduct regular management reviews of the ISMS"
+    ],
+    "expected_outcomes": [
+      "Management demonstrates visible leadership in information security",
+      "Resources are allocated for information security activities",
+      "Management reviews the ISMS at planned intervals"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.1", "A.5.2", "A.5.36"],
+    "required_evidence": ["EVID-MGT-001", "EVID-MGT-002", "EVID-MGT-003"],
+    "audit_intent": "Verify that management demonstrates leadership, commitment, and accountability for the ISMS."
+  },
+  {
+    "control_id": "A.5.5",
+    "clause": "5",
+    "title": "Contact with Authorities",
+    "objective": "Establish effective communication with regulatory and law enforcement authorities.",
+    "description": "The organization shall establish and maintain contact with relevant authorities.",
+    "implementation_guidance": [
+      "Identify relevant authorities applicable to the organization's sector and region",
+      "Establish procedures for contacting authorities in the event of security incidents",
+      "Document escalation paths for breach notification requirements",
+      "Maintain awareness of regulatory reporting obligations"
+    ],
+    "expected_outcomes": [
+      "Contact points with relevant authorities are established and maintained",
+      "Procedures exist for incident notification to authorities",
+      "Breach notification obligations are understood and documented"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.6", "A.6.8", "A.8.16"],
+    "required_evidence": ["EVID-AUT-001", "EVID-AUT-002"],
+    "audit_intent": "Verify that the organization has established and maintained contact with relevant authorities."
+  },
+  {
+    "control_id": "A.5.6",
+    "clause": "5",
+    "title": "Contact with Special Interest Groups",
+    "objective": "Stay informed about information security best practices and threats.",
+    "description": "The organization shall establish and maintain contact with special interest groups or other specialist security forums and professional associations.",
+    "implementation_guidance": [
+      "Identify relevant security groups, forums, and professional associations",
+      "Encourage participation in information sharing communities (e.g., ISACs)",
+      "Establish a process for receiving threat intelligence and security advisories",
+      "Document how information from groups is evaluated and acted upon"
+    ],
+    "expected_outcomes": [
+      "Membership or contact with information security groups is established",
+      "Security intelligence and advisories are received and evaluated",
+      "Participation in threat intelligence sharing where appropriate"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.5", "A.5.24", "A.8.16"],
+    "required_evidence": ["EVID-GRP-001", "EVID-GRP-002"],
+    "audit_intent": "Verify that the organization engages with information security groups and threat intelligence sources."
+  },
+  {
+    "control_id": "A.5.7",
+    "clause": "5",
+    "title": "Threat Intelligence",
+    "objective": "Maintain awareness of the threat landscape to proactively defend the organization.",
+    "description": "Information relating to information security threats shall be collected and analyzed to produce threat intelligence.",
+    "implementation_guidance": [
+      "Identify sources of threat intelligence relevant to the organization's industry",
+      "Establish a process for collecting, analyzing, and disseminating threat intelligence",
+      "Integrate threat intelligence into risk assessment and security operations",
+      "Review threat intelligence sources regularly for relevance and quality"
+    ],
+    "expected_outcomes": [
+      "Threat intelligence is systematically collected and analyzed",
+      "Threat intelligence informs security decisions and risk assessments",
+      "Security controls are adjusted based on evolving threat landscape"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "detective" },
+      { "name": "implementation_level", "value": "advanced" }
+    ],
+    "related_controls": ["A.5.6", "A.5.24", "A.8.7", "A.8.15", "A.8.16"],
+    "required_evidence": ["EVID-THI-001", "EVID-THI-002"],
+    "audit_intent": "Verify the organization systematically collects and acts upon threat intelligence."
+  },
+  {
+    "control_id": "A.5.8",
+    "clause": "5",
+    "title": "Information Security in Project Management",
+    "objective": "Integrate information security into project management practices.",
+    "description": "Information security shall be integrated into project management throughout the project lifecycle.",
+    "implementation_guidance": [
+      "Include information security requirements in project initiation documents",
+      "Conduct security assessments for projects handling sensitive information",
+      "Integrate security tasks into project plans and milestones",
+      "Ensure project managers have security awareness and guidance"
+    ],
+    "expected_outcomes": [
+      "Security is embedded in project management methodology",
+      "Projects identify and address security requirements from initiation",
+      "Project deliverables meet security requirements"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.1", "A.5.2", "A.8.25", "A.8.26"],
+    "required_evidence": ["EVID-PRJ-001", "EVID-PRJ-002"],
+    "audit_intent": "Verify that information security is integrated into project management practices."
+  },
+  {
+    "control_id": "A.5.9",
+    "clause": "5",
+    "title": "Inventory of Information and Other Associated Assets",
+    "objective": "Maintain a complete and accurate inventory of all information assets.",
+    "description": "An inventory of information and other associated assets, including owners, shall be developed and maintained.",
+    "implementation_guidance": [
+      "Identify all information assets and their associated physical and software assets",
+      "Assign ownership for each asset",
+      "Maintain the inventory in a current state with regular reviews",
+      "Classify assets based on their criticality and sensitivity"
+    ],
+    "expected_outcomes": [
+      "Complete asset inventory is maintained and current",
+      "Each asset has a designated owner",
+      "Assets are classified according to their value and sensitivity",
+      "Asset inventory is reviewed at planned intervals"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.10", "A.5.11", "A.5.13", "A.8.1"],
+    "required_evidence": ["EVID-INV-001", "EVID-INV-002", "EVID-INV-003"],
+    "audit_intent": "Verify that an asset inventory exists, is current, and has assigned owners."
+  },
+  {
+    "control_id": "A.5.10",
+    "clause": "5",
+    "title": "Acceptable Use of Information and Other Associated Assets",
+    "objective": "Define and enforce acceptable use rules for information assets.",
+    "description": "Rules for the acceptable use of information and other associated assets shall be identified, documented, and implemented.",
+    "implementation_guidance": [
+      "Develop rules for acceptable use of information assets",
+      "Communicate acceptable use rules to all users",
+      "Implement technical controls to enforce acceptable use policies",
+      "Monitor compliance with acceptable use rules"
+    ],
+    "expected_outcomes": [
+      "Acceptable use rules are documented and communicated",
+      "Users understand their obligations regarding asset use",
+      "Technical controls enforce acceptable use policies"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.9", "A.5.11", "A.6.1", "A.8.1"],
+    "required_evidence": ["EVID-AUP-001", "EVID-AUP-002"],
+    "audit_intent": "Verify that acceptable use policies are defined, communicated, and enforced."
+  },
+  {
+    "control_id": "A.5.11",
+    "clause": "5",
+    "title": "Return of Assets",
+    "objective": "Ensure assets are properly returned when employment or contracts end.",
+    "description": "Employees and external party users shall return all organizational assets in their possession upon termination of their employment, contract, or agreement.",
+    "implementation_guidance": [
+      "Include asset return requirements in employment contracts and agreements",
+      "Define a formal process for asset return upon termination",
+      "Verify return of physical and digital assets",
+      "Disable access rights promptly upon termination"
+    ],
+    "expected_outcomes": [
+      "Assets are returned upon termination of employment or contract",
+      "Access rights are revoked promptly on termination",
+      "Process for asset recovery is documented and followed"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.9", "A.5.10", "A.6.2", "A.8.1", "A.8.2"],
+    "required_evidence": ["EVID-RET-001", "EVID-RET-002"],
+    "audit_intent": "Verify that the organization has procedures for recovering assets upon termination."
+  },
+  {
+    "control_id": "A.5.12",
+    "clause": "5",
+    "title": "Classification of Information",
+    "objective": "Ensure information is classified according to its sensitivity and criticality.",
+    "description": "Information shall be classified according to the organization's information security needs based on confidentiality, integrity, availability, and relevant legal requirements.",
+    "implementation_guidance": [
+      "Develop an information classification scheme (e.g., public, internal, confidential, restricted)",
+      "Define classification levels with clear handling requirements",
+      "Assign classification labels to information assets",
+      "Include classification in awareness training"
+    ],
+    "expected_outcomes": [
+      "Information classification scheme is defined",
+      "Assets are classified according to the scheme",
+      "Handling procedures correspond to classification levels"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.9", "A.5.13", "A.5.14", "A.7.10"],
+    "required_evidence": ["EVID-CLS-001", "EVID-CLS-002"],
+    "audit_intent": "Verify that information is classified according to sensitivity and criticality."
+  },
+  {
+    "control_id": "A.5.13",
+    "clause": "5",
+    "title": "Labelling of Information",
+    "objective": "Ensure classified information is properly labelled for handling and protection.",
+    "description": "Procedures for information labelling shall be developed and implemented in accordance with the information classification scheme.",
+    "implementation_guidance": [
+      "Develop labelling procedures for each classification level",
+      "Implement automated labelling where possible",
+      "Ensure labels are visible on both physical and digital information",
+      "Handle unlabelled information at the highest classification level until classified"
+    ],
+    "expected_outcomes": [
+      "Labelling procedures aligned with classification scheme exist",
+      "Information assets carry appropriate labels",
+      "Automated labelling tools are used where feasible"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.9", "A.5.12", "A.7.10"],
+    "required_evidence": ["EVID-LBL-001", "EVID-LBL-002"],
+    "audit_intent": "Verify that information labelling procedures align with the classification scheme."
+  },
+  {
+    "control_id": "A.5.14",
+    "clause": "5",
+    "title": "Information Transfer",
+    "objective": "Protect information during transfer within and outside the organization.",
+    "description": "Information transfer rules, procedures, and agreements shall be in place for all types of transfer facilities within the organization and between the organization and other parties.",
+    "implementation_guidance": [
+      "Define rules for information transfer based on classification",
+      "Implement secure transfer mechanisms (encryption, secure protocols)",
+      "Establish agreements for information exchange with external parties",
+      "Log and monitor information transfers"
+    ],
+    "expected_outcomes": [
+      "Information transfers are protected according to classification",
+      "Secure transfer mechanisms are in place",
+      "Exchange agreements exist with external parties"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.12", "A.5.13", "A.5.20", "A.8.13", "A.8.24"],
+    "required_evidence": ["EVID-TRF-001", "EVID-TRF-002", "EVID-TRF-003"],
+    "audit_intent": "Verify that information is protected during transfer through appropriate technical and procedural controls."
+  },
+  {
+    "control_id": "A.5.15",
+    "clause": "5",
+    "title": "Access Control",
+    "objective": "Control access to information and information processing facilities.",
+    "description": "Rules for access to information and other associated assets shall be established and enforced, based on business and information security requirements.",
+    "implementation_guidance": [
+      "Define an access control policy based on business and security requirements",
+      "Implement the principle of least privilege",
+      "Provide access only on a need-to-know and need-to-use basis",
+      "Regularly review access rights and remove unnecessary privileges"
+    ],
+    "expected_outcomes": [
+      "Access control policy is documented and enforced",
+      "Least privilege principle is applied",
+      "Access rights are reviewed at planned intervals",
+      "Access provisioning and de-provisioning processes exist"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.16", "A.5.18", "A.8.2", "A.8.3", "A.8.4", "A.8.5"],
+    "required_evidence": ["EVID-ACC-001", "EVID-ACC-002", "EVID-ACC-003"],
+    "audit_intent": "Verify that access control rules are defined, implemented, and enforced across the organization."
+  },
+  {
+    "control_id": "A.5.16",
+    "clause": "5",
+    "title": "Identity Management",
+    "objective": "Manage the complete lifecycle of digital identities.",
+    "description": "The complete lifecycle of identities shall be managed.",
+    "implementation_guidance": [
+      "Establish a process for identity provisioning, modification, and de-provisioning",
+      "Implement unique identification of all users",
+      "Remove or disable identities promptly when no longer needed",
+      "Conduct periodic reviews of identity records"
+    ],
+    "expected_outcomes": [
+      "Identity lifecycle management processes are defined and followed",
+      "Each user has a unique identifier",
+      "Inactive identities are removed or disabled promptly"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.15", "A.5.18", "A.8.2", "A.8.4"],
+    "required_evidence": ["EVID-IAM-001", "EVID-IAM-002", "EVID-IAM-003"],
+    "audit_intent": "Verify that identities are managed throughout their lifecycle from creation to removal."
+  },
+  {
+    "control_id": "A.5.17",
+    "clause": "5",
+    "title": "Authentication Information",
+    "objective": "Securely manage authentication information throughout its lifecycle.",
+    "description": "Assignment and management of authentication information shall be controlled by a management process, including advising personnel on the appropriate handling of authentication information.",
+    "implementation_guidance": [
+      "Enforce strong password policies (length, complexity, rotation)",
+      "Implement MFA for privileged and remote access",
+      "Provide secure mechanisms for password reset and recovery",
+      "Ensure authentication information is not stored in plaintext"
+    ],
+    "expected_outcomes": [
+      "Authentication information is managed securely",
+      "Strong password policies are enforced",
+      "MFA is implemented for privileged access and remote access",
+      "Password reset procedures are secure"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.15", "A.5.16", "A.8.2", "A.8.4", "A.8.5"],
+    "required_evidence": ["EVID-AUTH-001", "EVID-AUTH-002", "EVID-AUTH-003"],
+    "audit_intent": "Verify that authentication information (passwords, keys, tokens) is managed through a secure lifecycle process."
+  },
+  {
+    "control_id": "A.5.18",
+    "clause": "5",
+    "title": "Access Rights",
+    "objective": "Provision, review, and revoke access rights in a controlled manner.",
+    "description": "Access rights to information and other associated assets shall be provisioned, reviewed, modified, and removed in accordance with the organization's access control policy.",
+    "implementation_guidance": [
+      "Implement a formal access rights provisioning process",
+      "Conduct periodic reviews of access rights (at least quarterly for critical systems)",
+      "Remove or modify access rights promptly upon role changes or termination",
+      "Maintain records of access rights assignments"
+    ],
+    "expected_outcomes": [
+      "Access rights provisioning follows a formal process",
+      "Access rights are reviewed at planned intervals",
+      "Access rights are promptly updated on role changes or termination",
+      "Records of access rights are maintained"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.15", "A.5.16", "A.5.17", "A.8.2", "A.8.4"],
+    "required_evidence": ["EVID-RGH-001", "EVID-RGH-002", "EVID-RGH-003"],
+    "audit_intent": "Verify that access rights are provisioned, reviewed, modified, and removed through a formal process."
+  },
+  {
+    "control_id": "A.5.19",
+    "clause": "5",
+    "title": "Information Security in Supplier Relationships",
+    "objective": "Protect organizational information assets accessible by suppliers.",
+    "description": "Processes and procedures shall be defined and implemented to manage information security risks associated with supplier relationships.",
+    "implementation_guidance": [
+      "Identify supplier relationships that involve access to organizational information",
+      "Assess information security risks for each supplier",
+      "Include information security requirements in supplier agreements",
+      "Monitor supplier compliance with security requirements"
+    ],
+    "expected_outcomes": [
+      "Supplier security risks are assessed and documented",
+      "Security requirements are included in supplier agreements",
+      "Supplier compliance with security requirements is monitored"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.20", "A.5.21", "A.5.22"],
+    "required_evidence": ["EVID-SUP-001", "EVID-SUP-002", "EVID-SUP-003"],
+    "audit_intent": "Verify that the organization manages information security risks in supplier relationships."
+  },
+  {
+    "control_id": "A.5.20",
+    "clause": "5",
+    "title": "Addressing Security Within Supplier Agreements",
+    "objective": "Ensure supplier agreements include information security requirements.",
+    "description": "Information security requirements for mitigating risks associated with supplier access to the organization's assets shall be agreed upon and documented with each supplier.",
+    "implementation_guidance": [
+      "Define information security clauses for supplier contracts",
+      "Include requirements for data protection, confidentiality, and breach notification",
+      "Specify right to audit suppliers",
+      "Define service levels and security metrics in agreements"
+    ],
+    "expected_outcomes": [
+      "Supplier agreements contain information security requirements",
+      "Confidentiality and data protection obligations are documented",
+      "Right to audit suppliers is included in agreements"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.19", "A.5.21", "A.5.22"],
+    "required_evidence": ["EVID-SAG-001", "EVID-SAG-002"],
+    "audit_intent": "Verify that supplier agreements include documented information security requirements."
+  },
+  {
+    "control_id": "A.5.21",
+    "clause": "5",
+    "title": "Managing Information Security in the ICT Supply Chain",
+    "objective": "Manage information security risks across the ICT supply chain.",
+    "description": "Processes shall be defined and implemented to manage the information security risks associated with the ICT products and services supply chain.",
+    "implementation_guidance": [
+      "Identify and assess risks in the ICT supply chain",
+      "Define security requirements for ICT products and services",
+      "Monitor the supply chain for security incidents and vulnerabilities",
+      "Apply defense-in-depth principles to supply chain security"
+    ],
+    "expected_outcomes": [
+      "ICT supply chain risks are identified and assessed",
+      "Security requirements are specified for ICT products and services",
+      "Supply chain security incidents are monitored"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "advanced" }
+    ],
+    "related_controls": ["A.5.19", "A.5.20", "A.5.22", "A.8.25", "A.8.26"],
+    "required_evidence": ["EVID-SCH-001", "EVID-SCH-002"],
+    "audit_intent": "Verify that the organization manages information security risks across the ICT supply chain."
+  },
+  {
+    "control_id": "A.5.22",
+    "clause": "5",
+    "title": "Monitoring, Review and Change Management of Supplier Services",
+    "objective": "Ensure supplier services are monitored, reviewed, and changes are managed.",
+    "description": "The organization shall regularly monitor, review, and audit supplier service delivery.",
+    "implementation_guidance": [
+      "Monitor supplier service delivery against agreed service levels",
+      "Conduct regular reviews of supplier security posture",
+      "Establish a process for managing changes to supplier services",
+      "Maintain incident reporting and escalation procedures with suppliers"
+    ],
+    "expected_outcomes": [
+      "Supplier service delivery is monitored and reviewed",
+      "Changes to supplier services are managed through a formal process",
+      "Supplier incidents are reported and escalated appropriately"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "detective" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.19", "A.5.20", "A.5.21", "A.8.32"],
+    "required_evidence": ["EVID-SMO-001", "EVID-SMO-002"],
+    "audit_intent": "Verify that supplier services are monitored, reviewed, and changes are managed."
+  },
+  {
+    "control_id": "A.5.23",
+    "clause": "5",
+    "title": "Information Security for Use of Cloud Services",
+    "objective": "Ensure appropriate information security when using cloud services.",
+    "description": "Processes for acquisition, use, management, and exit from cloud services shall be established in accordance with the organization's information security requirements.",
+    "implementation_guidance": [
+      "Define cloud service security requirements before procurement",
+      "Assess cloud service providers for security posture and compliance",
+      "Establish clear data ownership and data protection terms in cloud agreements",
+      "Define exit strategy for cloud service termination"
+    ],
+    "expected_outcomes": [
+      "Cloud services are assessed for security before adoption",
+      "Cloud agreements include data protection and security requirements",
+      "Exit strategy exists for each cloud service",
+      "Cloud security is monitored continuously"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.19", "A.5.20", "A.5.21", "A.8.13"],
+    "required_evidence": ["EVID-CLD-001", "EVID-CLD-002", "EVID-CLD-003"],
+    "audit_intent": "Verify that cloud services are acquired, used, managed, and decommissioned securely."
+  },
+  {
+    "control_id": "A.5.24",
+    "clause": "5",
+    "title": "Information Security Incident Management Planning and Preparation",
+    "objective": "Plan and prepare for information security incidents.",
+    "description": "The organization shall plan and prepare for information security incidents by defining, establishing, and communicating incident management processes and responsibilities.",
+    "implementation_guidance": [
+      "Establish an incident management policy and procedure",
+      "Define roles and responsibilities for incident response",
+      "Create incident response playbooks for common incident types",
+      "Conduct regular incident response exercises and tabletop simulations"
+    ],
+    "expected_outcomes": [
+      "Incident management policy and procedures are documented",
+      "Incident response roles and responsibilities are defined",
+      "Incident response playbooks exist and are tested",
+      "Personnel are trained on incident response procedures"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.25", "A.5.26", "A.5.27", "A.8.16"],
+    "required_evidence": ["EVID-IRP-001", "EVID-IRP-002", "EVID-IRP-003"],
+    "audit_intent": "Verify that the organization has planned and prepared for information security incidents."
+  },
+  {
+    "control_id": "A.5.25",
+    "clause": "5",
+    "title": "Assessment and Decision on Information Security Events",
+    "objective": "Assess information security events and decide if they constitute incidents.",
+    "description": "Information security events shall be assessed and it shall be decided if they are to be classified as information security incidents.",
+    "implementation_guidance": [
+      "Establish criteria for classifying events as incidents",
+      "Implement monitoring and detection mechanisms to identify events",
+      "Define escalation thresholds and procedures",
+      "Log and track all security events through triage"
+    ],
+    "expected_outcomes": [
+      "Security events are identified and logged",
+      "Events are assessed against incident classification criteria",
+      "Incident declaration follows established criteria"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "detective" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.24", "A.5.26", "A.8.15", "A.8.16"],
+    "required_evidence": ["EVID-EVT-001", "EVID-EVT-002"],
+    "audit_intent": "Verify that information security events are assessed and classified as incidents when appropriate."
+  },
+  {
+    "control_id": "A.5.26",
+    "clause": "5",
+    "title": "Response to Information Security Incidents",
+    "objective": "Respond to information security incidents effectively and promptly.",
+    "description": "Information security incidents shall be responded to in accordance with the documented incident management procedures.",
+    "implementation_guidance": [
+      "Activate incident response team upon incident declaration",
+      "Follow documented response procedures and playbooks",
+      "Contain, eradicate, and recover from incidents",
+      "Document all actions taken during incident response"
+    ],
+    "expected_outcomes": [
+      "Incidents are responded to promptly and effectively",
+      "Incident containment limits damage",
+      "Evidence is preserved for forensic analysis",
+      "Lessons learned are captured for improvement"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "corrective" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.24", "A.5.25", "A.5.27", "A.8.16"],
+    "required_evidence": ["EVID-RSP-001", "EVID-RSP-002", "EVID-RSP-003"],
+    "audit_intent": "Verify that the organization responds to information security incidents according to documented procedures."
+  },
+  {
+    "control_id": "A.5.27",
+    "clause": "5",
+    "title": "Learning from Information Security Incidents",
+    "objective": "Derive lessons from incidents to improve security posture.",
+    "description": "Knowledge gained from analyzing and resolving information security incidents shall be used to strengthen controls and reduce future incident likelihood or impact.",
+    "implementation_guidance": [
+      "Conduct post-incident reviews to identify root causes",
+      "Document lessons learned and action items",
+      "Update incident response plans and playbooks based on lessons",
+      "Share relevant learnings across the organization"
+    ],
+    "expected_outcomes": [
+      "Post-incident reviews are conducted systematically",
+      "Lessons learned are documented and actioned",
+      "Controls are improved based on incident learnings"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "corrective" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.24", "A.5.25", "A.5.26"],
+    "required_evidence": ["EVID-LRN-001", "EVID-LRN-002"],
+    "audit_intent": "Verify that lessons learned from incidents are systematically captured and used for improvement."
+  },
+  {
+    "control_id": "A.5.28",
+    "clause": "5",
+    "title": "Collection of Evidence",
+    "objective": "Collect and preserve evidence in a manner suitable for legal or disciplinary action.",
+    "description": "The organization shall establish and implement procedures for the identification, collection, acquisition, and preservation of evidence related to information security events.",
+    "implementation_guidance": [
+      "Define evidence collection procedures that meet legal and evidentiary standards",
+      "Establish chain of custody procedures",
+      "Use forensic tools and techniques for evidence preservation",
+      "Ensure personnel handling evidence are appropriately trained"
+    ],
+    "expected_outcomes": [
+      "Evidence collection procedures exist and are documented",
+      "Chain of custody is maintained for all evidence",
+      "Evidence is preserved in a forensically sound manner"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "detective" },
+      { "name": "implementation_level", "value": "advanced" }
+    ],
+    "related_controls": ["A.5.24", "A.5.25", "A.5.26", "A.8.14"],
+    "required_evidence": ["EVID-EVC-001", "EVID-EVC-002"],
+    "audit_intent": "Verify that the organization has procedures for collecting and preserving evidence in a forensically sound manner."
+  },
+  {
+    "control_id": "A.5.29",
+    "clause": "5",
+    "title": "Information Security During Disruption",
+    "objective": "Maintain information security during disruptions.",
+    "description": "The organization shall plan how to maintain information security at an acceptable level during any disruption.",
+    "implementation_guidance": [
+      "Integrate information security into business continuity planning",
+      "Define minimum security levels required during disruptions",
+      "Identify alternate processing arrangements that meet security requirements",
+      "Test security controls during business continuity exercises"
+    ],
+    "expected_outcomes": [
+      "Information security is maintained during disruptions",
+      "Business continuity plans include information security requirements",
+      "Alternate processing facilities meet security requirements",
+      "Security during disruptions is tested regularly"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.24", "A.5.26", "A.5.30", "A.8.11"],
+    "required_evidence": ["EVID-BCP-001", "EVID-BCP-002"],
+    "audit_intent": "Verify that the organization has planned to maintain information security during disruptions."
+  },
+  {
+    "control_id": "A.5.30",
+    "clause": "5",
+    "title": "ICT Readiness for Business Continuity",
+    "objective": "Ensure ICT systems are ready to support business continuity requirements.",
+    "description": "ICT readiness shall be planned, implemented, maintained, and tested based on business continuity objectives and ICT continuity requirements.",
+    "implementation_guidance": [
+      "Define ICT continuity requirements based on business impact analysis",
+      "Implement redundant systems and failover capabilities",
+      "Test ICT continuity arrangements regularly",
+      "Document and maintain ICT continuity plans"
+    ],
+    "expected_outcomes": [
+      "ICT continuity requirements are defined and documented",
+      "Redundant and failover systems are in place for critical services",
+      "ICT continuity plans are tested at planned intervals",
+      "Recovery time and recovery point objectives are met"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.29", "A.8.11", "A.8.13", "A.8.14"],
+    "required_evidence": ["EVID-ICT-001", "EVID-ICT-002", "EVID-ICT-003"],
+    "audit_intent": "Verify that ICT readiness for business continuity is planned, implemented, maintained, and tested."
+  },
+  {
+    "control_id": "A.5.31",
+    "clause": "5",
+    "title": "Legal, Statutory, Regulatory and Contractual Requirements",
+    "objective": "Identify and address legal, statutory, regulatory, and contractual requirements.",
+    "description": "Legal, statutory, regulatory, and contractual requirements relevant to information security shall be identified, documented, and kept up to date.",
+    "implementation_guidance": [
+      "Maintain a register of applicable legal and regulatory requirements",
+      "Identify contractual information security obligations",
+      "Review requirements regularly for changes",
+      "Assess compliance with identified requirements"
+    ],
+    "expected_outcomes": [
+      "Legal, regulatory, and contractual requirements are identified and documented",
+      "Requirements are reviewed and updated regularly",
+      "Compliance with requirements is assessed"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.32", "A.5.33", "A.5.34"],
+    "required_evidence": ["EVID-LGL-001", "EVID-LGL-002"],
+    "audit_intent": "Verify that the organization identifies and maintains awareness of applicable legal, regulatory, and contractual requirements."
+  },
+  {
+    "control_id": "A.5.32",
+    "clause": "5",
+    "title": "Intellectual Property Rights",
+    "objective": "Protect intellectual property rights (IPR).",
+    "description": "The organization shall implement procedures to protect intellectual property rights.",
+    "implementation_guidance": [
+      "Establish procedures for protecting intellectual property",
+      "Ensure licensed software is used in compliance with license terms",
+      "Implement controls to prevent unauthorized copying or distribution",
+      "Conduct periodic audits of software and IP usage"
+    ],
+    "expected_outcomes": [
+      "IPR protection procedures are documented",
+      "Software is used in compliance with license terms",
+      "Unauthorized copying and distribution are prevented"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.31", "A.5.33", "A.5.34", "A.8.19"],
+    "required_evidence": ["EVID-IPR-001", "EVID-IPR-002"],
+    "audit_intent": "Verify that the organization protects intellectual property rights."
+  },
+  {
+    "control_id": "A.5.33",
+    "clause": "5",
+    "title": "Protection of Records",
+    "objective": "Protect records from loss, destruction, falsification, and unauthorized access.",
+    "description": "Records shall be protected from loss, destruction, falsification, unauthorized access, and unauthorized release, in accordance with legal, regulatory, contractual, and business requirements.",
+    "implementation_guidance": [
+      "Define records retention schedules based on legal and business requirements",
+      "Implement controls to prevent unauthorized modification or deletion of records",
+      "Ensure records are stored securely with appropriate access controls",
+      "Implement backup and disaster recovery for critical records"
+    ],
+    "expected_outcomes": [
+      "Records retention and disposition schedules are defined",
+      "Records are protected from unauthorized access and modification",
+      "Records are available when needed for business or legal purposes",
+      "Disposal of records follows documented procedures"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.31", "A.5.32", "A.5.34", "A.8.10", "A.8.11"],
+    "required_evidence": ["EVID-REC-001", "EVID-REC-002", "EVID-REC-003"],
+    "audit_intent": "Verify that records are protected from loss, destruction, falsification, and unauthorized access."
+  },
+  {
+    "control_id": "A.5.34",
+    "clause": "5",
+    "title": "Privacy and Protection of Personally Identifiable Information",
+    "objective": "Protect personally identifiable information (PII) in accordance with applicable laws.",
+    "description": "The organization shall identify and meet the requirements for privacy and protection of personally identifiable information according to applicable laws, regulations, and contractual requirements.",
+    "implementation_guidance": [
+      "Identify PII within the organization and map its flow",
+      "Implement privacy controls aligned with GDPR or equivalent regulations",
+      "Establish data subject rights processes (access, erasure, portability)",
+      "Conduct data protection impact assessments for high-risk processing"
+    ],
+    "expected_outcomes": [
+      "PII is identified and protected according to legal requirements",
+      "Privacy notices and consent mechanisms are in place",
+      "Data subject rights can be fulfilled within required timeframes",
+      "Data protection impact assessments are conducted as needed"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.31", "A.5.33", "A.8.11", "A.8.13"],
+    "required_evidence": ["EVID-PII-001", "EVID-PII-002", "EVID-PII-003"],
+    "audit_intent": "Verify that the organization protects personally identifiable information in accordance with legal requirements."
+  },
+  {
+    "control_id": "A.5.35",
+    "clause": "5",
+    "title": "Independent Review of Information Security",
+    "objective": "Ensure the organization's approach to information security is reviewed independently.",
+    "description": "The organization's approach to managing information security and its implementation shall be reviewed independently at planned intervals.",
+    "implementation_guidance": [
+      "Conduct internal audits of the ISMS at planned intervals",
+      "Engage external auditors for independent assessments",
+      "Define audit scope and criteria based on risk assessment results",
+      "Ensure auditors are independent of the areas being audited"
+    ],
+    "expected_outcomes": [
+      "Independent reviews are conducted at planned intervals",
+      "Audit findings are documented and actioned",
+      "Management reviews audit results and drives improvement"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "detective" },
+      { "name": "implementation_level", "value": "advanced" }
+    ],
+    "related_controls": ["A.5.1", "A.5.4", "A.5.36"],
+    "required_evidence": ["EVID-AUD-001", "EVID-AUD-002", "EVID-AUD-003"],
+    "audit_intent": "Verify that the organization's information security approach is reviewed independently at planned intervals."
+  },
+  {
+    "control_id": "A.5.36",
+    "clause": "5",
+    "title": "Compliance with Policies, Rules, and Standards for Information Security",
+    "objective": "Ensure compliance with organizational information security policies and standards.",
+    "description": "Compliance with information security policies, rules, and standards shall be regularly reviewed.",
+    "implementation_guidance": [
+      "Conduct regular compliance reviews against policies and standards",
+      "Use automated tools to monitor compliance where possible",
+      "Document and report non-compliance findings",
+      "Implement corrective actions for non-compliance"
+    ],
+    "expected_outcomes": [
+      "Compliance with policies and standards is monitored",
+      "Non-compliance is detected, documented, and addressed",
+      "Compliance reporting is provided to management"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "detective" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.1", "A.5.2", "A.5.35"],
+    "required_evidence": ["EVID-CMP-001", "EVID-CMP-002"],
+    "audit_intent": "Verify that compliance with information security policies, rules, and standards is regularly reviewed."
+  },
+  {
+    "control_id": "A.5.37",
+    "clause": "5",
+    "title": "Documented Operating Procedures",
+    "objective": "Ensure information processing facilities are operated correctly and securely.",
+    "description": "Operating procedures for information processing facilities shall be documented and made available to personnel who need them.",
+    "implementation_guidance": [
+      "Document procedures for the operation of information processing facilities",
+      "Keep procedures current and accessible to authorized personnel",
+      "Include step-by-step instructions for security-relevant tasks",
+      "Review and update procedures regularly"
+    ],
+    "expected_outcomes": [
+      "Operating procedures are documented and available",
+      "Procedures are up to date and reflect current operations",
+      "Personnel follow documented procedures"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "organizational" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.1", "A.8.1", "A.8.32"],
+    "required_evidence": ["EVID-PROC-001", "EVID-PROC-002"],
+    "audit_intent": "Verify that operating procedures for information processing facilities are documented and available."
+  },
+  {
+    "control_id": "A.6.1",
+    "clause": "6",
+    "title": "Screening",
+    "objective": "Ensure personnel are suitable for their roles before employment.",
+    "description": "Background verification checks on all candidates for employment shall be carried out in accordance with relevant laws, regulations, and ethics, and proportional to the business requirements, the classification of the information to be accessed, and the perceived risks.",
+    "implementation_guidance": [
+      "Conduct background checks before extending employment offers",
+      "Tailor screening depth to role sensitivity and information access level",
+      "Include identity verification, criminal record, and credential checks",
+      "Document screening policies and obtain candidate consent"
+    ],
+    "expected_outcomes": [
+      "Background checks are conducted before hiring",
+      "Screening depth matches role sensitivity",
+      "Screening policies are documented and consistently applied",
+      "Results are documented and reviewed"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "people" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.2", "A.5.4", "A.6.2"],
+    "required_evidence": ["EVID-SCR-001", "EVID-SCR-002"],
+    "audit_intent": "Verify that background checks are conducted before employment."
+  },
+  {
+    "control_id": "A.6.2",
+    "clause": "6",
+    "title": "Terms and Conditions of Employment",
+    "objective": "Ensure personnel understand their information security responsibilities.",
+    "description": "The employment agreement shall state the employee's and the organization's responsibilities for information security.",
+    "implementation_guidance": [
+      "Include information security responsibilities in employment contracts",
+      "Include confidentiality or non-disclosure agreements in terms",
+      "Communicate security expectations during onboarding",
+      "Document consequences of non-compliance with security policies"
+    ],
+    "expected_outcomes": [
+      "Employment agreements include information security responsibilities",
+      "Employees acknowledge their security obligations",
+      "Confidentiality agreements are signed where required",
+      "Consequences of non-compliance are documented"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "people" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.2", "A.5.4", "A.6.1", "A.6.5"],
+    "required_evidence": ["EVID-EMP-001", "EVID-EMP-002"],
+    "audit_intent": "Verify that employment agreements include information security responsibilities."
+  },
+  {
+    "control_id": "A.6.3",
+    "clause": "6",
+    "title": "Information Security Awareness, Education and Training",
+    "objective": "Ensure personnel are aware of and competent in information security.",
+    "description": "Personnel of the organization and relevant external parties shall receive appropriate information security awareness, education, and training, and regular updates on organizational policies and procedures relevant to their role.",
+    "implementation_guidance": [
+      "Develop an information security awareness program",
+      "Conduct awareness training for all employees upon hiring and annually",
+      "Provide role-specific security training for privileged positions",
+      "Assess effectiveness of awareness and training programs"
+    ],
+    "expected_outcomes": [
+      "All employees complete security awareness training",
+      "Role-specific training is provided for privileged roles",
+      "Awareness program effectiveness is evaluated",
+      "Training records are maintained"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "people" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.1", "A.5.4", "A.6.1", "A.6.5"],
+    "required_evidence": ["EVID-TRN-001", "EVID-TRN-002", "EVID-TRN-003"],
+    "audit_intent": "Verify that personnel receive information security awareness, education, and training."
+  },
+  {
+    "control_id": "A.6.4",
+    "clause": "6",
+    "title": "Disciplinary Process",
+    "objective": "Enforce consistent disciplinary action for security policy violations.",
+    "description": "A disciplinary process shall be defined and communicated to take action against personnel who have committed an information security breach.",
+    "implementation_guidance": [
+      "Establish a formal disciplinary process for security violations",
+      "Communicate disciplinary consequences in policies and training",
+      "Apply sanctions consistently and proportionally",
+      "Document all disciplinary actions related to security"
+    ],
+    "expected_outcomes": [
+      "Disciplinary process for security violations exists",
+      "Personnel are aware of consequences of non-compliance",
+      "Disciplinary actions are documented and consistent"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "people" },
+      { "name": "control_type", "value": "corrective" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.1", "A.5.2", "A.6.2"],
+    "required_evidence": ["EVID-DIS-001", "EVID-DIS-002"],
+    "audit_intent": "Verify that a disciplinary process exists for addressing security breaches."
+  },
+  {
+    "control_id": "A.6.5",
+    "clause": "6",
+    "title": "Responsibilities After Termination or Change of Employment",
+    "objective": "Protect organizational interests when employment ends or changes.",
+    "description": "Information security responsibilities and duties that remain valid after termination or change of employment shall be defined, communicated to the employee or contractor, and enforced.",
+    "implementation_guidance": [
+      "Define post-termination security obligations (confidentiality, non-disclosure)",
+      "Communicate ongoing obligations at the time of termination",
+      "Ensure return of all organizational assets",
+      "Revoke all access rights upon termination"
+    ],
+    "expected_outcomes": [
+      "Post-termination obligations are defined and communicated",
+      "Assets are returned upon termination",
+      "Access rights are revoked promptly"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "people" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.11", "A.5.16", "A.5.18", "A.6.2"],
+    "required_evidence": ["EVID-TRM-001", "EVID-TRM-002"],
+    "audit_intent": "Verify that post-termination security responsibilities are defined, communicated, and enforced."
+  },
+  {
+    "control_id": "A.6.6",
+    "clause": "6",
+    "title": "Confidentiality or Non-Disclosure Agreements",
+    "objective": "Protect confidential information through legally enforceable agreements.",
+    "description": "Confidentiality or non-disclosure agreements reflecting the organization's needs for the protection of information shall be identified, documented, regularly reviewed, and signed by employees and relevant external parties.",
+    "implementation_guidance": [
+      "Use NDAs for employees with access to sensitive information",
+      "Include NDAs in supplier and third-party agreements",
+      "Review NDA terms regularly",
+      "Maintain a record of all signed NDAs"
+    ],
+    "expected_outcomes": [
+      "NDAs are signed by employees and relevant external parties",
+      "NDA terms are reviewed and updated regularly",
+      "NDA records are maintained"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "people" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.14", "A.5.19", "A.5.20", "A.6.2"],
+    "required_evidence": ["EVID-NDA-001", "EVID-NDA-002"],
+    "audit_intent": "Verify that NDAs are used to protect confidential information."
+  },
+  {
+    "control_id": "A.6.7",
+    "clause": "6",
+    "title": "Remote Working",
+    "objective": "Maintain information security when personnel work remotely.",
+    "description": "Security measures shall be implemented to protect information accessed, processed, or stored at remote work locations.",
+    "implementation_guidance": [
+      "Define remote working policy and security requirements",
+      "Provide secure remote access (VPN, MFA)",
+      "Ensure endpoint protection on remote devices",
+      "Train remote workers on security best practices"
+    ],
+    "expected_outcomes": [
+      "Remote working policy is documented",
+      "Secure remote access is provided",
+      "Remote devices have appropriate security controls",
+      "Remote workers are trained on security requirements"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "people" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.10", "A.8.5", "A.8.13", "A.8.16"],
+    "required_evidence": ["EVID-RMT-001", "EVID-RMT-002", "EVID-RMT-003"],
+    "audit_intent": "Verify that security measures are implemented for remote working."
+  },
+  {
+    "control_id": "A.6.8",
+    "clause": "6",
+    "title": "Information Security Event Reporting",
+    "objective": "Enable prompt reporting of information security events.",
+    "description": "The organization shall provide a mechanism for personnel to report observed or suspected information security events through appropriate channels in a timely manner.",
+    "implementation_guidance": [
+      "Establish a clear reporting channel for security events",
+      "Provide multiple reporting mechanisms (email, phone, portal)",
+      "Encourage a no-blame reporting culture",
+      "Acknowledge receipt of reports and provide status updates"
+    ],
+    "expected_outcomes": [
+      "Reporting mechanism is accessible to all personnel",
+      "Security events are reported in a timely manner",
+      "Reporters receive acknowledgement and feedback"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "people" },
+      { "name": "control_type", "value": "detective" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.24", "A.5.25", "A.5.26"],
+    "required_evidence": ["EVID-REP-001", "EVID-REP-002"],
+    "audit_intent": "Verify that personnel have a mechanism to report information security events."
+  },
+  {
+    "control_id": "A.7.1",
+    "clause": "7",
+    "title": "Physical Security Perimeters",
+    "objective": "Define and maintain physical security boundaries.",
+    "description": "Security perimeters shall be defined and used to protect areas that contain information and other associated assets.",
+    "implementation_guidance": [
+      "Define physical security perimeters for sensitive areas",
+      "Use physical barriers (walls, locked doors, fencing) to enforce perimeters",
+      "Implement intrusion detection at perimeters",
+      "Review perimeter effectiveness regularly"
+    ],
+    "expected_outcomes": [
+      "Physical perimeters are defined for sensitive areas",
+      "Physical barriers prevent unauthorized access",
+      "Perimeter security is monitored and maintained"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "physical" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.7.2", "A.7.3", "A.7.6", "A.7.8"],
+    "required_evidence": ["EVID-PHY-001", "EVID-PHY-002"],
+    "audit_intent": "Verify that physical security perimeters are defined and maintained."
+  },
+  {
+    "control_id": "A.7.2",
+    "clause": "7",
+    "title": "Physical Entry",
+    "objective": "Control physical access to secure areas.",
+    "description": "Secure areas shall be protected by appropriate entry controls to ensure that only authorized personnel are allowed access.",
+    "implementation_guidance": [
+      "Implement access control mechanisms at entry points (badges, biometrics, PIN)",
+      "Maintain visitor logs and escrow procedures",
+      "Review access rights to secure areas regularly",
+      "Alert on unauthorized access attempts"
+    ],
+    "expected_outcomes": [
+      "Entry to secure areas requires authentication",
+      "Visitors are logged and escorted",
+      "Access rights to secure areas are reviewed regularly"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "physical" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.7.1", "A.7.3", "A.7.4", "A.7.6"],
+    "required_evidence": ["EVID-ENT-001", "EVID-ENT-002"],
+    "audit_intent": "Verify that physical entry controls are in place for secure areas."
+  },
+  {
+    "control_id": "A.7.3",
+    "clause": "7",
+    "title": "Securing Offices, Rooms, and Facilities",
+    "objective": "Secure physical spaces containing information assets.",
+    "description": "Physical security for offices, rooms, and facilities shall be designed and implemented.",
+    "implementation_guidance": [
+      "Apply lock and key control to offices and server rooms",
+      "Implement environmental controls (fire suppression, climate control)",
+      "Use secure cabinets for sensitive paper documents",
+      "Implement clear desk and clear screen policies"
+    ],
+    "expected_outcomes": [
+      "Offices and facilities are physically secure",
+      "Environmental controls protect sensitive equipment",
+      "Sensitive documents are stored securely",
+      "Clear desk and clear screen policies are followed"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "physical" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.7.1", "A.7.2", "A.7.6", "A.7.7"],
+    "required_evidence": ["EVID-OFF-001", "EVID-OFF-002"],
+    "audit_intent": "Verify that offices, rooms, and facilities are physically secured."
+  },
+  {
+    "control_id": "A.7.4",
+    "clause": "7",
+    "title": "Physical Security Monitoring",
+    "objective": "Detect and deter physical security breaches.",
+    "description": "Premises shall be continuously monitored for unauthorized physical access.",
+    "implementation_guidance": [
+      "Install CCTV or other monitoring systems at key entry points",
+      "Implement alarm systems for doors and windows",
+      "Maintain monitoring and alarm logs",
+      "Respond promptly to alarms and alerts"
+    ],
+    "expected_outcomes": [
+      "Monitoring systems are in place for critical areas",
+      "Alarms are monitored and responded to",
+      "Monitoring logs are retained and reviewed"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "physical" },
+      { "name": "control_type", "value": "detective" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.7.1", "A.7.2", "A.7.3", "A.7.6"],
+    "required_evidence": ["EVID-MON-001", "EVID-MON-002"],
+    "audit_intent": "Verify that physical security is monitored to detect breaches."
+  },
+  {
+    "control_id": "A.7.5",
+    "clause": "7",
+    "title": "Protection Against Physical and Environmental Threats",
+    "objective": "Protect information assets from physical and environmental threats.",
+    "description": "Protection against physical and environmental threats, such as natural disasters, fire, flooding, earthquakes, vandalism, and terrorism, shall be designed and implemented.",
+    "implementation_guidance": [
+      "Conduct physical risk assessments for facilities",
+      "Install fire suppression and detection systems",
+      "Implement environmental monitoring (temperature, humidity, water)",
+      "Develop contingency plans for natural disasters"
+    ],
+    "expected_outcomes": [
+      "Physical threats are assessed and mitigated",
+      "Fire and environmental detection systems are installed",
+      "Business continuity plans address physical threats"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "physical" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.29", "A.5.30", "A.7.1", "A.7.4", "A.8.11"],
+    "required_evidence": ["EVID-ENV-001", "EVID-ENV-002"],
+    "audit_intent": "Verify that facilities are protected against physical and environmental threats."
+  },
+  {
+    "control_id": "A.7.6",
+    "clause": "7",
+    "title": "Working in Secure Areas",
+    "objective": "Maintain security in secure areas through procedural controls.",
+    "description": "Procedures for working in secure areas shall be designed and implemented.",
+    "implementation_guidance": [
+      "Restrict access to secure areas to authorized personnel only",
+      "Implement sign-in/sign-out procedures for secure areas",
+      "Escort visitors in secure areas at all times",
+      "Prohibit cameras and recording devices in secure areas"
+    ],
+    "expected_outcomes": [
+      "Access to secure areas is restricted and logged",
+      "Visitors are escorted in secure areas",
+      "Procedures for working in secure areas are followed"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "physical" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.7.1", "A.7.2", "A.7.3", "A.7.4"],
+    "required_evidence": ["EVID-SEC-001", "EVID-SEC-002"],
+    "audit_intent": "Verify that procedures for working in secure areas are documented and followed."
+  },
+  {
+    "control_id": "A.7.7",
+    "clause": "7",
+    "title": "Clear Desk and Clear Screen",
+    "objective": "Reduce risk of unauthorized access to information on desks and screens.",
+    "description": "Clear desk and clear screen rules shall be defined and implemented.",
+    "implementation_guidance": [
+      "Require all papers and media to be stored securely when not in use",
+      "Require workstations to be locked when unattended",
+      "Implement automatic screen lock after inactivity",
+      "Prohibit sticky notes containing passwords or sensitive information"
+    ],
+    "expected_outcomes": [
+      "Desks are cleared of sensitive documents when unattended",
+      "Screens are locked when unattended",
+      "Automatic screen lock is configured",
+      "Compliance with clear desk policy is monitored"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "physical" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.7.3", "A.7.6", "A.8.1", "A.8.5"],
+    "required_evidence": ["EVID-CDS-001", "EVID-CDS-002"],
+    "audit_intent": "Verify that clear desk and clear screen rules are defined and enforced."
+  },
+  {
+    "control_id": "A.7.8",
+    "clause": "7",
+    "title": "Equipment Siting and Protection",
+    "objective": "Protect equipment from physical and environmental threats.",
+    "description": "Equipment shall be sited and protected to reduce risks from environmental threats, unauthorized access, and damage.",
+    "implementation_guidance": [
+      "Site equipment away from environmental hazards",
+      "Secure equipment in locked cabinets or rooms",
+      "Protect equipment from power failures (UPS, generators)",
+      "Implement cable management to reduce trip hazards and tampering"
+    ],
+    "expected_outcomes": [
+      "Equipment is located in secure areas",
+      "Environmental protections (UPS, cooling) are in place",
+      "Equipment is protected from unauthorized physical access"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "physical" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.7.1", "A.7.3", "A.7.5", "A.8.11"],
+    "required_evidence": ["EVID-EQP-001", "EVID-EQP-002"],
+    "audit_intent": "Verify that equipment is sited and protected from threats."
+  },
+  {
+    "control_id": "A.7.9",
+    "clause": "7",
+    "title": "Security of Assets Off-Premises",
+    "objective": "Protect organizational assets when outside organizational premises.",
+    "description": "Assets off-premises shall be protected, taking into account the different risks of working outside the organization's premises.",
+    "implementation_guidance": [
+      "Encrypt data on mobile devices and laptops",
+      "Use VPN for remote access to corporate resources",
+      "Implement device tracking and remote wipe capabilities",
+      "Train personnel on off-premises security"
+    ],
+    "expected_outcomes": [
+      "Mobile devices are encrypted",
+      "Remote access uses secure connections",
+      "Lost or stolen devices can be remotely wiped"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "physical" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.6.7", "A.7.10", "A.8.5", "A.8.13", "A.8.24"],
+    "required_evidence": ["EVID-OFFP-001", "EVID-OFFP-002"],
+    "audit_intent": "Verify that off-premises assets are protected."
+  },
+  {
+    "control_id": "A.7.10",
+    "clause": "7",
+    "title": "Storage Media",
+    "objective": "Secure storage media throughout its lifecycle.",
+    "description": "Storage media shall be managed through their lifecycle of acquisition, use, transportation, and disposal in accordance with the organization's classification and handling requirements.",
+    "implementation_guidance": [
+      "Classify and label storage media according to information classification",
+      "Implement secure storage for sensitive media",
+      "Use secure erasure or physical destruction for media disposal",
+      "Track and audit removable media usage"
+    ],
+    "expected_outcomes": [
+      "Storage media is classified and labelled",
+      "Media is stored securely",
+      "Media disposal follows secure procedures",
+      "Removable media usage is controlled"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "physical" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.9", "A.5.12", "A.5.13", "A.7.9", "A.8.10"],
+    "required_evidence": ["EVID-MED-001", "EVID-MED-002"],
+    "audit_intent": "Verify that storage media is managed securely throughout its lifecycle."
+  },
+  {
+    "control_id": "A.7.11",
+    "clause": "7",
+    "title": "Supporting Utilities",
+    "objective": "Protect information processing facilities from utility failures.",
+    "description": "Information processing facilities shall be protected from power failures and other disruptions caused by failures in supporting utilities.",
+    "implementation_guidance": [
+      "Implement uninterruptible power supplies (UPS) for critical equipment",
+      "Provide backup generators for extended outages",
+      "Monitor utility services (power, cooling, communications)",
+      "Regularly test backup power systems"
+    ],
+    "expected_outcomes": [
+      "UPS systems protect critical equipment",
+      "Backup generators are available and tested",
+      "Utility failures do not cause data loss",
+      "Supporting utilities are monitored"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "physical" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.30", "A.7.5", "A.7.8", "A.8.11"],
+    "required_evidence": ["EVID-UTL-001", "EVID-UTL-002"],
+    "audit_intent": "Verify that supporting utilities are protected to ensure continuity of information processing."
+  },
+  {
+    "control_id": "A.7.12",
+    "clause": "7",
+    "title": "Cabling Security",
+    "objective": "Protect cabling from interception, interference, and damage.",
+    "description": "Cabling carrying power, data, or supporting information services shall be protected from interception, interference, and damage.",
+    "implementation_guidance": [
+      "Route cables through secure conduits or cable trays",
+      "Label cables for identification",
+      "Protect network cables from physical tampering",
+      "Use shielded cabling for sensitive areas"
+    ],
+    "expected_outcomes": [
+      "Cables are protected from physical damage",
+      "Cables are labelled and identifiable",
+      "Network cabling is protected from interception"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "physical" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.7.1", "A.7.8", "A.8.20"],
+    "required_evidence": ["EVID-CAB-001", "EVID-CAB-002"],
+    "audit_intent": "Verify that cabling is protected from interception, interference, and damage."
+  },
+  {
+    "control_id": "A.7.13",
+    "clause": "7",
+    "title": "Equipment Maintenance",
+    "objective": "Maintain equipment in proper working condition to ensure availability and integrity.",
+    "description": "Equipment shall be maintained correctly to ensure its continued availability and integrity.",
+    "implementation_guidance": [
+      "Establish a preventive maintenance schedule for all equipment",
+      "Conduct maintenance only by authorized personnel",
+      "Log all maintenance activities",
+      "Safely dispose of parts removed during maintenance"
+    ],
+    "expected_outcomes": [
+      "Equipment is maintained according to schedule",
+      "Maintenance records are documented",
+      "Only authorized personnel perform maintenance"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "physical" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.37", "A.7.8", "A.7.14"],
+    "required_evidence": ["EVID-MNT-001", "EVID-MNT-002"],
+    "audit_intent": "Verify that equipment is properly maintained."
+  },
+  {
+    "control_id": "A.7.14",
+    "clause": "7",
+    "title": "Secure Disposal or Re-use of Equipment",
+    "objective": "Prevent information leakage when equipment is disposed or re-used.",
+    "description": "All items of equipment containing storage media shall be verified to ensure that any sensitive data and licensed software has been removed or securely overwritten prior to disposal or re-use.",
+    "implementation_guidance": [
+      "Implement secure erasure procedures for storage media",
+      "Use certified data destruction services when required",
+      "Document disposal and sanitization for audit trail",
+      "Use physical destruction for media with highly sensitive data"
+    ],
+    "expected_outcomes": [
+      "Media is securely erased before equipment disposal or re-use",
+      "Data destruction is certified and documented",
+      "Physical destruction is used for highly sensitive media"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "physical" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.7.10", "A.8.10", "A.8.11"],
+    "required_evidence": ["EVID-DIS-001", "EVID-DIS-002"],
+    "audit_intent": "Verify that data is securely removed before equipment disposal or re-use."
+  },
+  {
+    "control_id": "A.8.1",
+    "clause": "8",
+    "title": "User Endpoint Devices",
+    "objective": "Secure user endpoint devices connecting to the organization's network.",
+    "description": "Information on user endpoint devices shall be protected.",
+    "implementation_guidance": [
+      "Implement endpoint protection software (antivirus, EDR)",
+      "Enforce device encryption for all endpoints",
+      "Apply security patches promptly",
+      "Restrict administrative privileges on endpoints"
+    ],
+    "expected_outcomes": [
+      "Endpoint devices are protected by security software",
+      "Device encryption is enforced",
+      "Endpoints receive timely security patches",
+      "Administrative privileges are restricted"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.10", "A.8.5", "A.8.7", "A.8.8"],
+    "required_evidence": ["EVID-END-001", "EVID-END-002", "EVID-END-003"],
+    "audit_intent": "Verify that user endpoint devices are secured."
+  },
+  {
+    "control_id": "A.8.2",
+    "clause": "8",
+    "title": "Privileged Access Rights",
+    "objective": "Control and manage privileged access rights.",
+    "description": "The allocation and use of privileged access rights shall be restricted and controlled.",
+    "implementation_guidance": [
+      "Limit privileged accounts to the minimum necessary",
+      "Use dedicated privileged access management (PAM) solutions",
+      "Implement just-in-time privileged access",
+      "Monitor and log privileged account activities"
+    ],
+    "expected_outcomes": [
+      "Privileged accounts are minimized",
+      "Privileged access is monitored and logged",
+      "Privileged access management processes are defined",
+      "Just-in-time access is used where feasible"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.15", "A.5.16", "A.5.17", "A.5.18", "A.8.4"],
+    "required_evidence": ["EVID-PRV-001", "EVID-PRV-002", "EVID-PRV-003"],
+    "audit_intent": "Verify that privileged access rights are restricted and controlled."
+  },
+  {
+    "control_id": "A.8.3",
+    "clause": "8",
+    "title": "Information Access Restriction",
+    "objective": "Restrict access to information based on business requirements.",
+    "description": "Access to information and other associated assets shall be restricted in accordance with the established access control policy.",
+    "implementation_guidance": [
+      "Implement role-based access control (RBAC)",
+      "Apply the principle of least privilege",
+      "Use attribute-based access control for fine-grained permissions",
+      "Regularly audit access rights for appropriateness"
+    ],
+    "expected_outcomes": [
+      "Access is restricted based on roles and need-to-know",
+      "Least privilege principle is consistently applied",
+      "Access audits are conducted regularly"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.15", "A.5.16", "A.5.18", "A.8.2"],
+    "required_evidence": ["EVID-ACR-001", "EVID-ACR-002"],
+    "audit_intent": "Verify that information access is restricted according to policy."
+  },
+  {
+    "control_id": "A.8.4",
+    "clause": "8",
+    "title": "Access to Source Code",
+    "objective": "Protect source code from unauthorized access and modification.",
+    "description": "Access to source code, development tools, and software libraries shall be restricted and managed.",
+    "implementation_guidance": [
+      "Restrict access to source code repositories",
+      "Implement code review processes before merging",
+      "Use branch protection rules",
+      "Log and monitor access to source code"
+    ],
+    "expected_outcomes": [
+      "Source code access is restricted",
+      "Code changes go through review",
+      "Access to source code is logged and monitored"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "advanced" }
+    ],
+    "related_controls": ["A.5.15", "A.5.16", "A.5.18", "A.8.2", "A.8.25"],
+    "required_evidence": ["EVID-SRC-001", "EVID-SRC-002"],
+    "audit_intent": "Verify that access to source code is restricted and managed."
+  },
+  {
+    "control_id": "A.8.5",
+    "clause": "8",
+    "title": "Secure Authentication",
+    "objective": "Implement robust authentication mechanisms.",
+    "description": "Secure authentication technologies and procedures shall be implemented based on information security requirements and risk assessment.",
+    "implementation_guidance": [
+      "Implement MFA for all external-facing systems",
+      "Use passwordless or phishing-resistant authentication where possible",
+      "Enforce strong password policies",
+      "Implement account lockout after failed attempts"
+    ],
+    "expected_outcomes": [
+      "MFA is implemented for remote and privileged access",
+      "Strong authentication mechanisms are in use",
+      "Account lockout prevents brute force attacks"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.15", "A.5.16", "A.5.17", "A.8.2"],
+    "required_evidence": ["EVID-AUTHN-001", "EVID-AUTHN-002"],
+    "audit_intent": "Verify that secure authentication mechanisms are implemented."
+  },
+  {
+    "control_id": "A.8.6",
+    "clause": "8",
+    "title": "Capacity Management",
+    "objective": "Ensure adequate capacity for information processing resources.",
+    "description": "The use of resources shall be monitored, tuned, and projections made of future capacity requirements to ensure the required system performance.",
+    "implementation_guidance": [
+      "Monitor utilization of critical systems",
+      "Establish capacity thresholds and alerting",
+      "Conduct capacity planning and forecasting",
+      "Scale resources proactively based on trends"
+    ],
+    "expected_outcomes": [
+      "System capacity is monitored",
+      "Capacity alerts are configured and responded to",
+      "Capacity planning ensures adequate resources"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.8.12", "A.8.13", "A.8.14"],
+    "required_evidence": ["EVID-CAP-001", "EVID-CAP-002"],
+    "audit_intent": "Verify that capacity management processes ensure adequate system resources."
+  },
+  {
+    "control_id": "A.8.7",
+    "clause": "8",
+    "title": "Protection Against Malware",
+    "objective": "Prevent, detect, and respond to malware infections.",
+    "description": "Information processing facilities and information shall be protected against malware.",
+    "implementation_guidance": [
+      "Implement antivirus and anti-malware software on all endpoints",
+      "Keep malware signatures up to date",
+      "Restrict execution of unauthorized software",
+      "Scan email attachments and downloads automatically"
+    ],
+    "expected_outcomes": [
+      "Anti-malware software is deployed on all endpoints",
+      "Malware signatures are current",
+      "Application whitelisting restricts unauthorized software",
+      "Malware incidents are detected and responded to"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.24", "A.5.25", "A.8.1", "A.8.8"],
+    "required_evidence": ["EVID-MAL-001", "EVID-MAL-002", "EVID-MAL-003"],
+    "audit_intent": "Verify that information processing facilities are protected against malware."
+  },
+  {
+    "control_id": "A.8.8",
+    "clause": "8",
+    "title": "Management of Technical Vulnerabilities",
+    "objective": "Identify and remediate technical vulnerabilities in a timely manner.",
+    "description": "Information about technical vulnerabilities of information systems being used shall be obtained, the organization's exposure to such vulnerabilities evaluated, and appropriate measures taken to address the associated risk.",
+    "implementation_guidance": [
+      "Establish a vulnerability management program",
+      "Conduct regular vulnerability scans",
+      "Apply security patches within defined SLAs",
+      "Maintain a patch management process"
+    ],
+    "expected_outcomes": [
+      "Vulnerability scans are conducted regularly",
+      "Security patches are applied in a timely manner",
+      "Patch management process is documented and followed",
+      "Vulnerability remediation SLAs are defined"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "corrective" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.7", "A.8.7", "A.8.15", "A.8.16"],
+    "required_evidence": ["EVID-VULN-001", "EVID-VULN-002", "EVID-VULN-003"],
+    "audit_intent": "Verify that technical vulnerabilities are identified and remediated."
+  },
+  {
+    "control_id": "A.8.9",
+    "clause": "8",
+    "title": "Configuration Management",
+    "objective": "Maintain secure configuration baselines for all systems.",
+    "description": "Configurations of hardware, software, services, and networks shall be established, documented, implemented, monitored, and reviewed.",
+    "implementation_guidance": [
+      "Establish security configuration baselines for all system types",
+      "Use automated configuration management tools",
+      "Monitor configuration drift",
+      "Apply security hardening standards (CIS benchmarks)"
+    ],
+    "expected_outcomes": [
+      "Systems are configured according to security baselines",
+      "Configuration drift is detected and corrected",
+      "Configuration management is automated where possible"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.37", "A.8.7", "A.8.8", "A.8.32"],
+    "required_evidence": ["EVID-CFG-001", "EVID-CFG-002", "EVID-CFG-003"],
+    "audit_intent": "Verify that secure configuration baselines are established and maintained."
+  },
+  {
+    "control_id": "A.8.10",
+    "clause": "8",
+    "title": "Information Deletion",
+    "objective": "Delete information when it is no longer required.",
+    "description": "Information and other associated assets shall be deleted when no longer required, in accordance with the organization's information retention policies.",
+    "implementation_guidance": [
+      "Define data retention and deletion schedules",
+      "Implement secure deletion mechanisms that prevent recovery",
+      "Automate deletion where possible",
+      "Verify deletion completion"
+    ],
+    "expected_outcomes": [
+      "Data retention and deletion schedules are defined",
+      "Deletion is performed securely",
+      "Deletion compliance is verified"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.33", "A.7.10", "A.7.14", "A.8.11"],
+    "required_evidence": ["EVID-DEL-001", "EVID-DEL-002"],
+    "audit_intent": "Verify that information is deleted securely when no longer required."
+  },
+  {
+    "control_id": "A.8.11",
+    "clause": "8",
+    "title": "Data Masking",
+    "objective": "Protect sensitive data by masking it from unauthorized viewing.",
+    "description": "Data masking shall be applied in accordance with the organization's access control policy and business requirements, taking consideration of applicable legislation.",
+    "implementation_guidance": [
+      "Identify scenarios where data masking is required",
+      "Implement masking in non-production environments",
+      "Use dynamic masking for production access",
+      "Apply masking consistently across all data copies"
+    ],
+    "expected_outcomes": [
+      "Sensitive data is masked in non-production environments",
+      "Dynamic masking protects data during authorized access",
+      "Data masking is consistent across all copies"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "advanced" }
+    ],
+    "related_controls": ["A.5.15", "A.5.34", "A.8.3", "A.8.13"],
+    "required_evidence": ["EVID-MSK-001", "EVID-MSK-002"],
+    "audit_intent": "Verify that data masking is applied to protect sensitive information."
+  },
+  {
+    "control_id": "A.8.12",
+    "clause": "8",
+    "title": "Data Leakage Prevention",
+    "objective": "Prevent unauthorized disclosure of sensitive information.",
+    "description": "Data leakage prevention measures shall be applied to systems, networks, and devices that process, store, or transmit sensitive information.",
+    "implementation_guidance": [
+      "Implement DLP solutions for data in motion, at rest, and in use",
+      "Define DLP rules and policies based on data classification",
+      "Monitor for unauthorized data transfers",
+      "Block or alert on policy violations"
+    ],
+    "expected_outcomes": [
+      "DLP measures are implemented for sensitive data",
+      "Unauthorized data transfers are detected and blocked",
+      "DLP incidents are investigated"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "advanced" }
+    ],
+    "related_controls": ["A.5.14", "A.5.15", "A.5.34", "A.8.3", "A.8.13"],
+    "required_evidence": ["EVID-DLP-001", "EVID-DLP-002"],
+    "audit_intent": "Verify that data leakage prevention measures are implemented."
+  },
+  {
+    "control_id": "A.8.13",
+    "clause": "8",
+    "title": "Information Backup",
+    "objective": "Protect data availability through regular backups.",
+    "description": "Backup copies of information, software, and system images shall be maintained and regularly tested in accordance with the backup policy.",
+    "implementation_guidance": [
+      "Define backup policy with retention and frequency requirements",
+      "Automate backups for critical systems",
+      "Store backups offline or in isolated environments",
+      "Test restoration processes at planned intervals"
+    ],
+    "expected_outcomes": [
+      "Backups are performed according to policy",
+      "Backup integrity is verified",
+      "Restoration is tested regularly",
+      "Backups are protected from ransomware"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.30", "A.5.33", "A.7.10", "A.8.14"],
+    "required_evidence": ["EVID-BAK-001", "EVID-BAK-002", "EVID-BAK-003"],
+    "audit_intent": "Verify that backups are performed, maintained, and tested."
+  },
+  {
+    "control_id": "A.8.14",
+    "clause": "8",
+    "title": "Redundancy of Information Processing Facilities",
+    "objective": "Ensure continuity through redundant information processing facilities.",
+    "description": "Information processing facilities shall be implemented with redundancy sufficient to meet availability requirements.",
+    "implementation_guidance": [
+      "Identify availability requirements for critical systems",
+      "Implement redundancy for critical infrastructure (servers, network, power)",
+      "Use load balancing and failover clustering",
+      "Test failover mechanisms regularly"
+    ],
+    "expected_outcomes": [
+      "Critical systems have redundant components",
+      "Failover is tested regularly",
+      "Availability requirements are met"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.29", "A.5.30", "A.8.11", "A.8.13"],
+    "required_evidence": ["EVID-RED-001", "EVID-RED-002"],
+    "audit_intent": "Verify that information processing facilities have redundancy to meet availability requirements."
+  },
+  {
+    "control_id": "A.8.15",
+    "clause": "8",
+    "title": "Logging",
+    "objective": "Record and maintain logs of user activities, exceptions, and security events.",
+    "description": "Logs that record user activities, exceptions, faults, and information security events shall be produced, stored, protected, and analyzed.",
+    "implementation_guidance": [
+      "Enable logging on all critical systems",
+      "Centralize logs using a SIEM or log management solution",
+      "Protect logs from tampering and unauthorized access",
+      "Define log retention periods based on legal and business requirements"
+    ],
+    "expected_outcomes": [
+      "Comprehensive logging is enabled across systems",
+      "Logs are centralized and protected",
+      "Log analysis is performed for threat detection",
+      "Log retention meets legal and business requirements"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "detective" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.25", "A.5.28", "A.8.16"],
+    "required_evidence": ["EVID-LOG-001", "EVID-LOG-002", "EVID-LOG-003"],
+    "audit_intent": "Verify that logs are produced, stored, protected, and analyzed."
+  },
+  {
+    "control_id": "A.8.16",
+    "clause": "8",
+    "title": "Monitoring Activities",
+    "objective": "Monitor systems and networks for anomalous activity.",
+    "description": "Networks, systems, and applications shall be monitored for anomalous behavior and appropriate actions taken to evaluate potential information security incidents.",
+    "implementation_guidance": [
+      "Implement continuous security monitoring",
+      "Use SIEM for correlation and alerting",
+      "Define monitoring use cases and alerts",
+      "Establish a triage process for monitoring alerts"
+    ],
+    "expected_outcomes": [
+      "Systems and networks are continuously monitored",
+      "Anomalous behavior is detected and alerted",
+      "Alerts are triaged and investigated"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "detective" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.24", "A.5.25", "A.5.26", "A.8.15"],
+    "required_evidence": ["EVID-MON-001", "EVID-MON-002"],
+    "audit_intent": "Verify that networks, systems, and applications are monitored for anomalous activity."
+  },
+  {
+    "control_id": "A.8.17",
+    "clause": "8",
+    "title": "Clock Synchronization",
+    "objective": "Ensure consistent time across systems for accurate logging and incident investigation.",
+    "description": "The clocks of information processing systems used by the organization shall be synchronized to approved time sources.",
+    "implementation_guidance": [
+      "Configure NTP on all systems",
+      "Synchronize to a trusted time source",
+      "Log any clock drift or synchronization errors",
+      "Ensure time source reliability"
+    ],
+    "expected_outcomes": [
+      "System clocks are synchronized to a trusted source",
+      "Logs have consistent timestamps",
+      "Clock synchronization is monitored"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.28", "A.8.15", "A.8.16"],
+    "required_evidence": ["EVID-CLK-001", "EVID-CLK-002"],
+    "audit_intent": "Verify that system clocks are synchronized to approved time sources."
+  },
+  {
+    "control_id": "A.8.18",
+    "clause": "8",
+    "title": "Use of Privileged Utility Programs",
+    "objective": "Control the use of privileged utility programs.",
+    "description": "The use of utility programs that can potentially override system and application controls shall be restricted and tightly controlled.",
+    "implementation_guidance": [
+      "Identify and inventory privileged utility programs",
+      "Restrict access to utilities to authorized personnel only",
+      "Log all use of privileged utilities",
+      "Monitor for unauthorized utility usage"
+    ],
+    "expected_outcomes": [
+      "Privileged utility programs are identified and controlled",
+      "Usage of utilities is logged"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.2", "A.5.16", "A.8.2", "A.8.15"],
+    "required_evidence": ["EVID-UTIL-001", "EVID-UTIL-002"],
+    "audit_intent": "Verify that privileged utility programs are restricted and controlled."
+  },
+  {
+    "control_id": "A.8.19",
+    "clause": "8",
+    "title": "Installation of Software on Operational Systems",
+    "objective": "Control software installation on operational systems.",
+    "description": "Procedures and measures shall be implemented to control the installation of software on operational systems.",
+    "implementation_guidance": [
+      "Establish a formal change management process for software installation",
+      "Use application whitelisting where feasible",
+      "Test software in a staging environment before production deployment",
+      "Maintain an inventory of installed software"
+    ],
+    "expected_outcomes": [
+      "Software installation follows formal procedures",
+      "Application whitelisting restricts unauthorized software",
+      "Software inventory is maintained"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.32", "A.5.33", "A.8.7", "A.8.8", "A.8.32"],
+    "required_evidence": ["EVID-SWI-001", "EVID-SWI-002"],
+    "audit_intent": "Verify that software installation on operational systems is controlled."
+  },
+  {
+    "control_id": "A.8.20",
+    "clause": "8",
+    "title": "Networks Security",
+    "objective": "Secure networks and network services.",
+    "description": "Networks and network devices shall be secured, managed, and controlled to protect information in transit and support the organization's access controls.",
+    "implementation_guidance": [
+      "Segment networks based on trust levels and data sensitivity",
+      "Implement firewalls between network segments",
+      "Use network access control (NAC) for device authentication",
+      "Monitor network traffic for anomalies"
+    ],
+    "expected_outcomes": [
+      "Network segments isolate sensitive systems",
+      "Firewalls enforce network security policies",
+      "Network traffic is monitored for threats"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.7.12", "A.8.15", "A.8.16", "A.8.21", "A.8.22"],
+    "required_evidence": ["EVID-NET-001", "EVID-NET-002", "EVID-NET-003"],
+    "audit_intent": "Verify that networks and network devices are secured."
+  },
+  {
+    "control_id": "A.8.21",
+    "clause": "8",
+    "title": "Segregation of Networks",
+    "objective": "Separate network services and user groups to protect sensitive information.",
+    "description": "Groups of information services, users, and information systems shall be segregated on networks.",
+    "implementation_guidance": [
+      "Create separate VLANs for different security zones",
+      "Segregate management and operational traffic",
+      "Implement DMZ for public-facing services",
+      "Control traffic between network segments with firewalls"
+    ],
+    "expected_outcomes": [
+      "Networks are segregated into security zones",
+      "Traffic between zones is controlled and monitored",
+      "Sensitive systems are isolated from general access"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.8.20", "A.8.22"],
+    "required_evidence": ["EVID-SEG-001", "EVID-SEG-002"],
+    "audit_intent": "Verify that networks are segregated to protect sensitive services."
+  },
+  {
+    "control_id": "A.8.22",
+    "clause": "8",
+    "title": "Filtering of Network Traffic",
+    "objective": "Filter network traffic to restrict malicious or unauthorized communication.",
+    "description": "Network traffic between different network segments and between networks and the internet shall be filtered based on security rules.",
+    "implementation_guidance": [
+      "Implement firewalls to filter traffic between network segments",
+      "Use intrusion prevention systems (IPS) for traffic inspection",
+      "Define explicit allow rules and deny all other traffic",
+      "Monitor and update filtering rules regularly"
+    ],
+    "expected_outcomes": [
+      "Network traffic is filtered between segments",
+      "IPS inspects traffic for malicious content",
+      "Firewall rules follow least privilege principle",
+      "Rule changes are managed through change control"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.8.20", "A.8.21"],
+    "required_evidence": ["EVID-FLT-001", "EVID-FLT-002"],
+    "audit_intent": "Verify that network traffic is filtered according to security rules."
+  },
+  {
+    "control_id": "A.8.23",
+    "clause": "8",
+    "title": "Web Filtering",
+    "objective": "Protect users and systems from web-based threats.",
+    "description": "Access to external websites shall be managed to reduce exposure to malicious content.",
+    "implementation_guidance": [
+      "Implement web proxy with content filtering",
+      "Block known malicious and inappropriate categories",
+      "Allow URL allow-listing for business-required sites",
+      "Monitor web traffic for anomalies"
+    ],
+    "expected_outcomes": [
+      "Web filtering blocks access to malicious sites",
+      "Inappropriate web categories are restricted",
+      "Web traffic is monitored for threats"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.14", "A.8.7", "A.8.16", "A.8.22"],
+    "required_evidence": ["EVID-WEB-001", "EVID-WEB-002"],
+    "audit_intent": "Verify that web filtering is implemented to protect against web-based threats."
+  },
+  {
+    "control_id": "A.8.24",
+    "clause": "8",
+    "title": "Use of Cryptography",
+    "objective": "Use cryptography to protect information confidentiality, integrity, and authenticity.",
+    "description": "Cryptographic controls shall be defined and implemented to protect information in transit, at rest, and in use.",
+    "implementation_guidance": [
+      "Develop a cryptographic policy covering algorithm selection and key management",
+      "Encrypt sensitive data at rest and in transit",
+      "Implement proper key management (generation, storage, rotation, revocation)",
+      "Use approved cryptographic algorithms and protocols"
+    ],
+    "expected_outcomes": [
+      "Cryptographic policy is documented",
+      "Sensitive data is encrypted at rest and in transit",
+      "Key management practices are defined and followed",
+      "Approved cryptographic algorithms are used"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.14", "A.5.17", "A.5.34", "A.8.13"],
+    "required_evidence": ["EVID-CRY-001", "EVID-CRY-002", "EVID-CRY-003"],
+    "audit_intent": "Verify that cryptographic controls are defined, implemented, and managed."
+  },
+  {
+    "control_id": "A.8.25",
+    "clause": "8",
+    "title": "Secure Development Life Cycle",
+    "objective": "Integrate security into the software development lifecycle.",
+    "description": "Rules for the secure development of software and systems shall be established and applied.",
+    "implementation_guidance": [
+      "Integrate security into each phase of the SDLC",
+      "Conduct threat modeling during design",
+      "Perform security code reviews",
+      "Use SAST and DAST tools for automated security testing"
+    ],
+    "expected_outcomes": [
+      "Security is integrated throughout SDLC",
+      "Threat modeling is conducted for new features",
+      "Security testing is automated",
+      "Vulnerabilities are identified and resolved before deployment"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.8", "A.8.26", "A.8.27", "A.8.28", "A.8.29"],
+    "required_evidence": ["EVID-SDL-001", "EVID-SDL-002", "EVID-SDL-003"],
+    "audit_intent": "Verify that security is integrated into the software development lifecycle."
+  },
+  {
+    "control_id": "A.8.26",
+    "clause": "8",
+    "title": "Application Security Requirements",
+    "objective": "Define and implement security requirements for applications.",
+    "description": "Information security requirements shall be identified, agreed upon, and documented for information systems and applications before their development or acquisition.",
+    "implementation_guidance": [
+      "Define security requirements during the requirements phase",
+      "Include authentication, authorization, and data protection requirements",
+      "Address OWASP Top 10 risks in web application requirements",
+      "Verify security requirements are met before go-live"
+    ],
+    "expected_outcomes": [
+      "Security requirements are defined before development",
+      "Applications meet defined security requirements",
+      "Security verification is performed before deployment"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.8", "A.8.25", "A.8.27"],
+    "required_evidence": ["EVID-ASR-001", "EVID-ASR-002"],
+    "audit_intent": "Verify that security requirements are defined and met for applications."
+  },
+  {
+    "control_id": "A.8.27",
+    "clause": "8",
+    "title": "Secure System Architecture and Engineering Principles",
+    "objective": "Apply security principles in system architecture and engineering.",
+    "description": "Principles for engineering secure systems shall be established, documented, maintained, and applied to any information system development activity.",
+    "implementation_guidance": [
+      "Define secure architecture principles (defense in depth, least privilege)",
+      "Apply secure by design principles",
+      "Conduct architecture security reviews",
+      "Use reference architectures validated by security teams"
+    ],
+    "expected_outcomes": [
+      "Secure engineering principles are documented",
+      "Systems are designed with security built in",
+      "Architecture reviews validate security design"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.8.25", "A.8.26", "A.8.28"],
+    "required_evidence": ["EVID-ARC-001", "EVID-ARC-002"],
+    "audit_intent": "Verify that secure system architecture and engineering principles are defined and applied."
+  },
+  {
+    "control_id": "A.8.28",
+    "clause": "8",
+    "title": "Secure Coding",
+    "objective": "Ensure software is developed using secure coding practices.",
+    "description": "Secure coding principles shall be applied to ensure software is written securely, reducing the number and severity of vulnerabilities.",
+    "implementation_guidance": [
+      "Establish secure coding standards",
+      "Train developers in secure coding techniques",
+      "Use static analysis tools to detect security flaws",
+      "Conduct peer code reviews focused on security"
+    ],
+    "expected_outcomes": [
+      "Secure coding standards are defined and used",
+      "Developers are trained in secure coding",
+      "Static analysis identifies security issues",
+      "Code reviews verify secure coding practices"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.8.25", "A.8.27", "A.8.29"],
+    "required_evidence": ["EVID-COD-001", "EVID-COD-002"],
+    "audit_intent": "Verify that secure coding practices are applied."
+  },
+  {
+    "control_id": "A.8.29",
+    "clause": "8",
+    "title": "Security Testing in Development and Acceptance",
+    "objective": "Test security controls during development and acceptance.",
+    "description": "Security testing processes shall be defined and implemented in the development lifecycle.",
+    "implementation_guidance": [
+      "Conduct SAST during development",
+      "Conduct DAST on running applications",
+      "Perform penetration testing before major releases",
+      "Include security acceptance criteria in user acceptance testing"
+    ],
+    "expected_outcomes": [
+      "Security testing is integrated into development",
+      "Vulnerabilities are identified before deployment",
+      "Penetration testing is conducted on critical applications"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "detective" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.8.25", "A.8.28", "A.8.30"],
+    "required_evidence": ["EVID-TST-001", "EVID-TST-002"],
+    "audit_intent": "Verify that security testing is conducted during development and acceptance."
+  },
+  {
+    "control_id": "A.8.30",
+    "clause": "8",
+    "title": "Outsourced Development",
+    "objective": "Ensure security of outsourced software development.",
+    "description": "The organization shall direct, monitor, and review the activities related to outsourced system development.",
+    "implementation_guidance": [
+      "Include security requirements in outsourced development contracts",
+      "Define deliverables including security artifacts and test results",
+      "Require secure coding practices from the vendor",
+      "Conduct security reviews of delivered code"
+    ],
+    "expected_outcomes": [
+      "Security requirements are included in outsourcing contracts",
+      "Outsourced development is monitored for security compliance",
+      "Delivered code is verified for security"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.19", "A.5.20", "A.8.25", "A.8.26"],
+    "required_evidence": ["EVID-OUT-001", "EVID-OUT-002"],
+    "audit_intent": "Verify that outsourced development is subject to security requirements and oversight."
+  },
+  {
+    "control_id": "A.8.31",
+    "clause": "8",
+    "title": "Separation of Development, Test, and Production Environments",
+    "objective": "Separate environments to reduce risk of unauthorized access or changes.",
+    "description": "Development, testing, and production environments shall be separated to reduce the risks of unauthorized access or changes to the production environment.",
+    "implementation_guidance": [
+      "Maintain separate physical or logical environments for development, test, and production",
+      "Restrict access between environments",
+      "Prevent developers from having direct access to production",
+      "Use controlled release processes for promotion between environments"
+    ],
+    "expected_outcomes": [
+      "Development, test, and production environments are separated",
+      "Access between environments is controlled",
+      "Production changes follow a formal release process"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.8.25", "A.8.32"],
+    "required_evidence": ["EVID-ENV-001", "EVID-ENV-002"],
+    "audit_intent": "Verify that development, test, and production environments are separated."
+  },
+  {
+    "control_id": "A.8.32",
+    "clause": "8",
+    "title": "Change Management",
+    "objective": "Manage changes to information processing facilities in a controlled manner.",
+    "description": "Changes to information processing facilities and information systems shall be subject to change management procedures.",
+    "implementation_guidance": [
+      "Establish a formal change management process",
+      "Assess the security impact of each change",
+      "Obtain approval before implementing changes",
+      "Document and communicate changes after implementation"
+    ],
+    "expected_outcomes": [
+      "Change management process is documented",
+      "Changes are assessed for security impact",
+      "Changes are approved before implementation",
+      "Change records are maintained"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "foundational" }
+    ],
+    "related_controls": ["A.5.37", "A.8.9", "A.8.19", "A.8.31"],
+    "required_evidence": ["EVID-CHG-001", "EVID-CHG-002", "EVID-CHG-003"],
+    "audit_intent": "Verify that changes are managed through a formal change management process."
+  },
+  {
+    "control_id": "A.8.33",
+    "clause": "8",
+    "title": "Test Information",
+    "objective": "Protect test data from unauthorized access and ensure it does not contain production data.",
+    "description": "Test information shall be appropriately selected, protected, and managed.",
+    "implementation_guidance": [
+      "Use anonymized or synthetic data for testing",
+      "Prohibit use of production data in test environments",
+      "Protect test data according to its classification",
+      "Delete test data when no longer needed"
+    ],
+    "expected_outcomes": [
+      "Test data is protected and managed",
+      "Production data is not used in tests without sanitization",
+      "Test data is cleaned up after testing"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.8.10", "A.8.11", "A.8.25", "A.8.31"],
+    "required_evidence": ["EVID-TSTD-001", "EVID-TSTD-002"],
+    "audit_intent": "Verify that test information is protected and managed."
+  },
+  {
+    "control_id": "A.8.34",
+    "clause": "8",
+    "title": "Protection of Information Systems During Audit Testing",
+    "objective": "Protect operational systems during audit tests.",
+    "description": "Audit tests and other assurance activities involving assessment of operational systems shall be planned and agreed between the auditor and appropriate management.",
+    "implementation_guidance": [
+      "Plan audit tests in advance with system owners",
+      "Conduct tests in non-production environments where possible",
+      "Use read-only access for audit activities",
+      "Monitor audit activities for any unintended impact"
+    ],
+    "expected_outcomes": [
+      "Audit tests are planned and agreed in advance",
+      "Production systems are protected from adverse effects of testing",
+      "Audit activities are monitored"
+    ],
+    "attributes": [
+      { "name": "clause_group", "value": "technological" },
+      { "name": "control_type", "value": "preventive" },
+      { "name": "implementation_level", "value": "intermediate" }
+    ],
+    "related_controls": ["A.5.35", "A.8.25", "A.8.29"],
+    "required_evidence": ["EVID-AUDT-001", "EVID-AUDT-002"],
+    "audit_intent": "Verify that audit tests are planned and operational systems are protected during testing."
+  }
+]
