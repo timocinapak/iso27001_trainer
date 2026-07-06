@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import ClassVar
 
 from rich import box
-from rich.console import Console, RenderableType
+from rich.console import Console
 from rich.layout import Layout
 from rich.panel import Panel
 from rich.table import Table

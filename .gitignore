@@ -32,3 +32,6 @@ htmlcov/
 
 # Build artifacts
 *.tsbuildinfo
+
+# Output (generated datasets, scenarios, exports)
+output/

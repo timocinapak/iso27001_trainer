@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   CheckCircle2,
   XCircle,
@@ -6,18 +6,27 @@ import {
   ChevronDown,
   ChevronRight,
   Search,
+  Loader2,
+  Play,
+  FileText,
 } from "lucide-react";
 import Badge from "../ui/Badge";
-import { sampleValidation } from "../../data/knowledge";
 import { cn } from "../../lib/utils";
-import type { ValidationResult } from "../../types";
+import { getGenerationHistory, startValidation, getValidationStatus } from "../../lib/api";
+import type { JobStatus } from "../../lib/api";
+
+interface ValidationCheck {
+  name: string;
+  status: "passed" | "failed" | "warning";
+  message?: string;
+}
 
 function ValidationCard({
   result,
   expanded,
   onToggle,
 }: {
-  result: ValidationResult;
+  result: { sample_id: string; status: string; checks: ValidationCheck[] };
   expanded: boolean;
   onToggle: () => void;
 }) {
@@ -126,6 +135,15 @@ function ValidationCard({
                 </Badge>
               </div>
             ))}
+            {result.checks.filter((c) => c.message).length > 0 && (
+              <div className="mt-2 space-y-1">
+                {result.checks.filter((c) => c.message).map((c, i) => (
+                  <p key={i} className="text-[12px] text-surface-500 italic">
+                    {c.message}
+                  </p>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       )}
@@ -137,16 +155,70 @@ export default function ValidationPage() {
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [filter, setFilter] = useState<"all" | "passed" | "failed" | "warning">("all");
   const [search, setSearch] = useState("");
+  const [datasetIds, setDatasetIds] = useState<string[]>([]);
+  const [selectedDataset, setSelectedDataset] = useState<string>("");
+  const [validationResults, setValidationResults] = useState<JobStatus | null>(null);
+  const [isValidating, setIsValidating] = useState(false);
+  const [currentJobId, setCurrentJobId] = useState<string | null>(null);
 
-  const filtered = sampleValidation.filter((r) => {
+  useEffect(() => {
+    getGenerationHistory().then((jobs) => {
+      const ids = jobs
+        .filter((j) => j.status === "completed" && j.result?.dataset_id)
+        .map((j) => j.result!.dataset_id as string);
+      setDatasetIds(ids);
+      if (ids.length > 0) setSelectedDataset(ids[0] ?? "");
+    }).catch(() => {});
+  }, []);
+
+  useEffect(() => {
+    if (!currentJobId) return;
+    const interval = setInterval(async () => {
+      try {
+        const job = await getValidationStatus(currentJobId);
+        if (job.status === "completed") {
+          setValidationResults(job);
+          setIsValidating(false);
+          setCurrentJobId(null);
+          clearInterval(interval);
+        } else if (job.status === "failed") {
+          setIsValidating(false);
+          setCurrentJobId(null);
+          clearInterval(interval);
+        }
+      } catch {
+        setIsValidating(false);
+        setCurrentJobId(null);
+        clearInterval(interval);
+      }
+    }, 500);
+    return () => clearInterval(interval);
+  }, [currentJobId]);
+
+  const handleValidate = async () => {
+    if (!selectedDataset) return;
+    setIsValidating(true);
+    try {
+      const result = await startValidation(selectedDataset);
+      setCurrentJobId(result.job_id);
+    } catch {
+      setIsValidating(false);
+    }
+  };
+
+  const summary = validationResults?.result?.summary as Record<string, unknown> | undefined;
+  const samples = (validationResults?.result as Record<string, unknown>)?.samples as
+    | { sample_id: string; status: string; checks: ValidationCheck[] }[] | undefined;
+
+  const displayResults = samples || [];
+  const passedCount = summary?.passed as number || 0;
+  const failedCount = summary?.failed as number || 0;
+
+  const filtered = displayResults.filter((r) => {
     const matchesFilter = filter === "all" || r.status === filter;
     const matchesSearch = r.sample_id.toLowerCase().includes(search.toLowerCase());
     return matchesFilter && matchesSearch;
   });
-
-  const passed = sampleValidation.filter((r) => r.status === "passed").length;
-  const failed = sampleValidation.filter((r) => r.status === "failed").length;
-  const warnings = sampleValidation.filter((r) => r.status === "warning").length;
 
   return (
     <div className="animate-fade-in p-6">
@@ -168,7 +240,7 @@ export default function ValidationPage() {
             </span>
           </div>
           <p className="mt-1 font-display text-2xl font-bold text-emerald-300">
-            {passed}
+            {passedCount || "—"}
           </p>
         </div>
         <div className="rounded-xl border border-amber-500/20 bg-amber-500/5 p-4">
@@ -179,7 +251,7 @@ export default function ValidationPage() {
             </span>
           </div>
           <p className="mt-1 font-display text-2xl font-bold text-amber-300">
-            {warnings}
+            {summary ? (summary.passed as number) - (summary.failed as number) || "—" : "—"}
           </p>
         </div>
         <div className="rounded-xl border border-red-500/20 bg-red-500/5 p-4">
@@ -190,7 +262,7 @@ export default function ValidationPage() {
             </span>
           </div>
           <p className="mt-1 font-display text-2xl font-bold text-red-300">
-            {failed}
+            {failedCount || "—"}
           </p>
         </div>
       </div>
@@ -206,6 +278,38 @@ export default function ValidationPage() {
             className="w-full rounded-lg border border-surface-700/60 bg-surface-800/50 py-2.5 pl-9 pr-4 text-sm text-surface-200 placeholder-surface-500 backdrop-blur transition-colors focus:border-emerald-500/30 focus:outline-none focus:ring-1 focus:ring-emerald-500/20"
           />
         </div>
+
+        <div className="flex items-center gap-2">
+          <select
+            value={selectedDataset}
+            onChange={(e) => setSelectedDataset(e.target.value)}
+            className="rounded-lg border border-surface-700/60 bg-surface-800/50 px-3 py-2.5 text-[13px] text-surface-200 backdrop-blur"
+          >
+            {datasetIds.length === 0 && <option value="">No datasets</option>}
+            {datasetIds.map((id) => (
+              <option key={id} value={id}>{id}</option>
+            ))}
+          </select>
+
+          <button
+            onClick={handleValidate}
+            disabled={isValidating || !selectedDataset}
+            className={cn(
+              "flex items-center gap-2 rounded-lg px-4 py-2.5 text-[13px] font-medium transition-all",
+              isValidating || !selectedDataset
+                ? "cursor-not-allowed bg-surface-700 text-surface-500"
+                : "bg-amber-500 text-white hover:bg-amber-600"
+            )}
+          >
+            {isValidating ? (
+              <Loader2 className="h-3.5 w-3.5 animate-spin" />
+            ) : (
+              <Play className="h-3.5 w-3.5" />
+            )}
+            {isValidating ? "Validating..." : "Validate"}
+          </button>
+        </div>
+
         <div className="flex gap-1">
           {(["all", "passed", "failed", "warning"] as const).map((f) => (
             <button
@@ -225,18 +329,30 @@ export default function ValidationPage() {
       </div>
 
       <div className="space-y-3">
-        {filtered.map((result) => (
-          <ValidationCard
-            key={result.sample_id}
-            result={result}
-            expanded={expandedId === result.sample_id}
-            onToggle={() =>
-              setExpandedId(
-                expandedId === result.sample_id ? null : result.sample_id
-              )
-            }
-          />
-        ))}
+        {validationResults === null ? (
+          <div className="flex flex-col items-center justify-center py-16 text-surface-500">
+            <FileText className="mb-3 h-8 w-8" />
+            <p className="text-sm">Select a dataset and click Validate to see results</p>
+          </div>
+        ) : filtered.length === 0 ? (
+          <div className="flex flex-col items-center justify-center py-16 text-surface-500">
+            <CheckCircle2 className="mb-3 h-8 w-8" />
+            <p className="text-sm">No matching validation results</p>
+          </div>
+        ) : (
+          filtered.map((result) => (
+            <ValidationCard
+              key={result.sample_id}
+              result={result}
+              expanded={expandedId === result.sample_id}
+              onToggle={() =>
+                setExpandedId(
+                  expandedId === result.sample_id ? null : result.sample_id
+                )
+              }
+            />
+          ))
+        )}
       </div>
     </div>
   );

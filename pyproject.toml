@@ -66,6 +66,12 @@ line-length = 100
 [tool.ruff.lint]
 select = ["E", "F", "I", "N", "W", "UP", "B", "SIM", "ARG"]
 
+[tool.ruff.lint.per-file-ignores]
+"**/scenario_generator/generator.py" = ["E501"]
+"**/common/models/base.py" = ["E501"]
+"**/knowledge_pack/models.py" = ["E501"]
+"**/tui/app.py" = ["F401"]
+
 [tool.mypy]
 strict = true
 python_version = "3.11"
